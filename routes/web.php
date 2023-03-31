@@ -12,6 +12,10 @@ use App\Http\Controllers\MemberController;
 use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\JobController;
 use App\Http\Controllers\CampaignController;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\OrderShipped;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +27,15 @@ use App\Http\Controllers\CampaignController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/testemail', function () {
+
+    $recipient = 'great.chriz@gmail.com';
+
+    Mail::to($recipient)->send(new OrderShipped());
+
+    dd('sudccess');
+
+});
 
 Route::redirect('/', 'login');
 
