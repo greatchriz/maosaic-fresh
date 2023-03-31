@@ -29,7 +29,7 @@ use App\Mail\OrderShipped;
 */
 Route::get('/testemail', function () {
 
-    $recipient = 'great.chriz@gmail.com';
+    $recipient = 'unlayeremail4now@gmail.com';
 
     Mail::to($recipient)->send(new OrderShipped());
 
