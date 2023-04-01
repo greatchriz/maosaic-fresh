@@ -27,15 +27,7 @@ use App\Mail\OrderShipped;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/testemail', function () {
 
-    $recipient = 'unlayeremail4now@gmail.com';
-
-    Mail::to($recipient)->send(new OrderShipped());
-
-    dd('sudccess');
-
-});
 
 Route::redirect('/', 'login');
 
@@ -60,9 +52,9 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     // Route for the getting the data feed
     Route::get('/json-data-feed', [DataFeedController::class, 'getDataFeed'])->name('json_data_feed');
 
-    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-    Route::get('/dashboard/analytics', [DashboardController::class, 'analytics'])->name('analytics');
-    Route::get('/dashboard/fintech', [DashboardController::class, 'fintech'])->name('fintech');
+    // Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    // Route::get('/dashboard/analytics', [DashboardController::class, 'analytics'])->name('analytics');
+    Route::get('/dashboard', [DashboardController::class, 'fintech'])->name('fintech');
     Route::get('/ecommerce/customers', [CustomerController::class, 'index'])->name('customers');
     Route::get('/ecommerce/orders', [OrderController::class, 'index'])->name('orders');
     Route::get('/ecommerce/invoices', [InvoiceController::class, 'index'])->name('invoices');
