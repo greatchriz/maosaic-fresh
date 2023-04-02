@@ -10,8 +10,8 @@
                 </div>
                 <!-- User info -->
                 <div>
-                    <div class="mb-2">Hey <strong class="font-medium text-slate-800">Mary</strong> 👋, this is your current balance:</div>
-                    <div class="text-3xl font-bold text-emerald-500">$47,347.09</div>
+                    <div class="mb-2">Hey <strong class="font-medium text-slate-800">{{ $loggedUser->name }}</strong> 👋, this is your current balance:</div>
+                    <div class="text-3xl font-bold text-emerald-500">${{ $loggedUser->account_balance }}.00</div>
                 </div>
             </div>
             <!-- Right side -->

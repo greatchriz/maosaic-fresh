@@ -1,7 +1,7 @@
 @props(['card'])
 <!-- Card 1 -->
 <label class="relative block cursor-pointer text-left w-full">
-    <input type="radio" name="radio-buttons" class="peer sr-only" checked />
+    <input type="radio" name="card_id" class="peer sr-only" value="{{ $card->id }}" checked />
     <div class="p-4 rounded border border-slate-200 hover:border-slate-300 shadow-sm duration-150 ease-in-out">
         <div class="grid grid-cols-12 items-center gap-x-2">
             <!-- Card -->

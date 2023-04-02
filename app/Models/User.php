@@ -10,6 +10,7 @@ use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
 use App\Models\Card;
+use App\Models\Deposit;
 
 class User extends Authenticatable implements MustVerifyEmail
 {
@@ -71,5 +72,10 @@ class User extends Authenticatable implements MustVerifyEmail
     public function cards()
     {
         return $this->hasMany(Card::class);
+    }
+
+    public function deposits()
+    {
+        return $this->hasMany(Deposit::class);
     }
 }

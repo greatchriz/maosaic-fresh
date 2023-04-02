@@ -14,6 +14,7 @@ use App\Http\Controllers\JobController;
 use App\Http\Controllers\CampaignController;
 use Illuminate\Support\Facades\Mail;
 use App\Http\Controllers\CardController;
+use App\Http\Controllers\DepositController;
 
 
 
@@ -58,11 +59,12 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/ecommerce/pay', function () {
         return view('pages/ecommerce/pay');
     })->name('pay');
-
     Route::post('pay', [CardController::class, 'store'])->name('store-card');
+
     Route::get('/deposit', function () {
         return view('pages/finance/credit-cards');
     })->name('deposit');
+    Route::post('make-deposit', [DepositController::class, 'store'])->name('make-deposit');
 
     Route::get('/dashboard', [DashboardController::class, 'fintech'])->name('dashboard');
     Route::get('/ecommerce', [CustomerController::class, 'index'])->name('ecommerce');
