@@ -3,6 +3,11 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\View;
+use Illuminate\Contracts\Auth\Guard;
+// use Illuminate\Support\Facades\Auth;
+
+
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -21,8 +26,15 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
-    {
-        //
-    }
+
+
+     public function boot(Guard $auth)
+     {
+
+         // Using Closure based composers...
+         View::composer('*', function ($view) use ($auth) {
+             $view->with('loggedUser', $auth->user());
+         });
+     }
 }
+

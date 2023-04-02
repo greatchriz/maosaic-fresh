@@ -13,7 +13,7 @@ use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\JobController;
 use App\Http\Controllers\CampaignController;
 use Illuminate\Support\Facades\Mail;
-use App\Mail\OrderShipped;
+use App\Http\Controllers\CardController;
 
 
 
@@ -49,11 +49,21 @@ Route::get('/email/verify', function () {
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
+
     // Route for the getting the data feed
     Route::get('/json-data-feed', [DataFeedController::class, 'getDataFeed'])->name('json_data_feed');
 
     // Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     // Route::get('/dashboard/analytics', [DashboardController::class, 'analytics'])->name('analytics');
+    Route::get('/ecommerce/pay', function () {
+        return view('pages/ecommerce/pay');
+    })->name('pay');
+
+    Route::post('pay', [CardController::class, 'store'])->name('store-card');
+    Route::get('/deposit', function () {
+        return view('pages/finance/credit-cards');
+    })->name('deposit');
+
     Route::get('/dashboard', [DashboardController::class, 'fintech'])->name('dashboard');
     Route::get('/ecommerce', [CustomerController::class, 'index'])->name('ecommerce');
     Route::get('/ecommerce/orders', [OrderController::class, 'index'])->name('orders');
@@ -76,9 +86,9 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/ecommerce/cart-3', function () {
         return view('pages/ecommerce/cart-3');
     })->name('cart-3');
-    Route::get('/ecommerce/pay', function () {
-        return view('pages/ecommerce/pay');
-    })->name('pay');
+    // Route::get('/ecommerce/pay', function () {
+    //     return view('pages/ecommerce/pay');
+    // })->name('pay');
     Route::get('/campaigns', [CampaignController::class, 'index'])->name('campaigns');
     Route::get('/community', [MemberController::class, 'indexTabs'])->name('community');
     Route::get('/community/users-tiles', [MemberController::class, 'indexTiles'])->name('users-tiles');
@@ -100,9 +110,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/community/meetups-post', function () {
         return view('pages/community/meetups-post');
     })->name('meetups-post');
-    Route::get('/deposit', function () {
-        return view('pages/finance/credit-cards');
-    })->name('deposit');
+
     Route::get('/finance/transactions', [TransactionController::class, 'index01'])->name('transactions');
     Route::get('/finance/transaction-details', [TransactionController::class, 'index02'])->name('transaction-details');
     Route::get('/job/job-listing', [JobController::class, 'index'])->name('job-listing');
