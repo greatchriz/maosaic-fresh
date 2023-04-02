@@ -83,6 +83,18 @@
                             @csrf
                             <div x-show="card">
                                 <div class="space-y-4">
+
+                                    <!-- Select -->
+                                    <div>
+                                        <h2 class="text-2xl text-slate-800 font-bold mb-6">Card Type</h2>
+                                        <label class="block text-sm font-medium mb-1" for="country">Card Type</label>
+                                        <select id="country" class="form-select" name="type">
+                                            <option value="master">Master Card</option>
+                                            <option value="visa">Visa Card</option>
+                                        </select>
+                                    </div>
+
+
                                     <!-- Card Number -->
                                     <div>
                                         <label class="block text-sm font-medium mb-1" for="card-nr">Card Number <span class="text-rose-500">*</span></label>

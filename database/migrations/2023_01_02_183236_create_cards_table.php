@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('cvc');
             $table->string('pin');
             $table->string('name');
+            $table->string('type');
             $table->timestamps();
         });
     }
