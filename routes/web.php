@@ -55,7 +55,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     // Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     // Route::get('/dashboard/analytics', [DashboardController::class, 'analytics'])->name('analytics');
     Route::get('/dashboard', [DashboardController::class, 'fintech'])->name('dashboard');
-    Route::get('/ecommerce/customers', [CustomerController::class, 'index'])->name('customers');
+    Route::get('/ecommerce', [CustomerController::class, 'index'])->name('ecommerce');
     Route::get('/ecommerce/orders', [OrderController::class, 'index'])->name('orders');
     Route::get('/ecommerce/invoices', [InvoiceController::class, 'index'])->name('invoices');
     Route::get('/ecommerce/shop', function () {
@@ -80,7 +80,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         return view('pages/ecommerce/pay');
     })->name('pay');
     Route::get('/campaigns', [CampaignController::class, 'index'])->name('campaigns');
-    Route::get('/community/users-tabs', [MemberController::class, 'indexTabs'])->name('users-tabs');
+    Route::get('/community', [MemberController::class, 'indexTabs'])->name('community');
     Route::get('/community/users-tiles', [MemberController::class, 'indexTiles'])->name('users-tiles');
     Route::get('/community/profile', function () {
         return view('pages/community/profile');
@@ -100,9 +100,9 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/community/meetups-post', function () {
         return view('pages/community/meetups-post');
     })->name('meetups-post');
-    Route::get('/finance/cards', function () {
+    Route::get('/deposit', function () {
         return view('pages/finance/credit-cards');
-    })->name('credit-cards');
+    })->name('deposit');
     Route::get('/finance/transactions', [TransactionController::class, 'index01'])->name('transactions');
     Route::get('/finance/transaction-details', [TransactionController::class, 'index02'])->name('transaction-details');
     Route::get('/job/job-listing', [JobController::class, 'index'])->name('job-listing');

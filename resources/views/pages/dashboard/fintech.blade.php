@@ -30,7 +30,7 @@
         <!-- Cards -->
         <div class="grid grid-cols-12 gap-6">
 
-            <!-- Page Intro -->                     
+            <!-- Page Intro -->
             <x-fintech.fintech-intro />
 
             <!-- Line chart (Portfolio Returns) -->

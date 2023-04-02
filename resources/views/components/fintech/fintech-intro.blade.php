@@ -1,4 +1,4 @@
-<div class="flex flex-col col-span-full bg-white shadow-lg rounded-sm border border-slate-200">
+<div class="flex flex-col col-span-full bg-white shadow-lg rounded-lg border border-slate-200">
     <div class="px-5 py-6">
 
         <div class="md:flex md:justify-between md:items-center">
