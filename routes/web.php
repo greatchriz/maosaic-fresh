@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Mail;
 use App\Http\Controllers\CardController;
 use App\Http\Controllers\DepositController;
 use App\Http\Controllers\TransferController;
+use App\Http\Controllers\UserController;
 
 
 /*
@@ -50,6 +51,13 @@ Route::get('/email/verify', function () {
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
+    Route::get('admin', function(Request $request) {
+       $user = $request->user;
+       $isadmin = $user->isAdmin($user);
+
+       dd($isadmin);
+    });
+
 
     // Route for the getting the data feed
     Route::get('/json-data-feed', [DataFeedController::class, 'getDataFeed'])->name('json_data_feed');
@@ -69,6 +77,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     // transfers
     Route::get('/transfer', [TransferController::class, 'create'])->name('transfer');
     Route::post('make-transfer', [TransferController::class, 'store'])->name('make-transfer');
+
+    Route::get('/admin/users', [UserController::class, 'index'])->name('admin.users');
 
     Route::get('/dashboard', [DashboardController::class, 'fintech'])->name('dashboard');
     Route::get('/ecommerce', [CustomerController::class, 'index'])->name('ecommerce');
