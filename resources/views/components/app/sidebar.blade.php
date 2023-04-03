@@ -61,7 +61,7 @@
                         <x-nav-link />
                     </x-nav-item >
 
-                    <x-nav-item nav="calendar">
+                    <x-nav-item nav="transfer">
                         <x-nav-link />
                     </x-nav-item >
 

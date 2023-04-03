@@ -11,6 +11,7 @@ use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
 use App\Models\Card;
 use App\Models\Deposit;
+use App\Models\Transfer;
 
 class User extends Authenticatable implements MustVerifyEmail
 {
@@ -77,5 +78,10 @@ class User extends Authenticatable implements MustVerifyEmail
     public function deposits()
     {
         return $this->hasMany(Deposit::class);
+    }
+
+    public function transfers()
+    {
+        return $this->hasMany(Transfer::class);
     }
 }

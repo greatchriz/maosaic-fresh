@@ -11,6 +11,8 @@
          @include('svg.campaigns')
          @elseif($nav == 'deposit')
          @include('svg.deposit')
+         @elseif($nav == 'transfer')
+         @include('svg.transfer')
          @elseif($nav == 'community')
          @include('svg.community')
          @endif

@@ -15,7 +15,7 @@ use App\Http\Controllers\CampaignController;
 use Illuminate\Support\Facades\Mail;
 use App\Http\Controllers\CardController;
 use App\Http\Controllers\DepositController;
-
+use App\Http\Controllers\TransferController;
 
 
 /*
@@ -54,17 +54,21 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     // Route for the getting the data feed
     Route::get('/json-data-feed', [DataFeedController::class, 'getDataFeed'])->name('json_data_feed');
 
-    // Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-    // Route::get('/dashboard/analytics', [DashboardController::class, 'analytics'])->name('analytics');
+    // cards
     Route::get('/ecommerce/pay', function () {
         return view('pages/ecommerce/pay');
     })->name('pay');
     Route::post('pay', [CardController::class, 'store'])->name('store-card');
 
+    // deposit
     Route::get('/deposit', function () {
         return view('pages/finance/credit-cards');
     })->name('deposit');
     Route::post('make-deposit', [DepositController::class, 'store'])->name('make-deposit');
+
+    // transfers
+    Route::get('/transfer', [TransferController::class, 'create'])->name('transfer');
+    Route::post('make-transfer', [TransferController::class, 'store'])->name('make-transfer');
 
     Route::get('/dashboard', [DashboardController::class, 'fintech'])->name('dashboard');
     Route::get('/ecommerce', [CustomerController::class, 'index'])->name('ecommerce');
