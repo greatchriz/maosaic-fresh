@@ -65,13 +65,15 @@
                         <x-nav-link />
                     </x-nav-item >
 
+                    <x-nav-item nav="deposit">
+                        <x-nav-link />
+                    </x-nav-item >
+
                     <x-nav-item nav="campaigns">
                         <x-nav-link />
                     </x-nav-item >
 
-                    <x-nav-item nav="deposit">
-                        <x-nav-link />
-                    </x-nav-item >
+
 
                 </ul>
 
