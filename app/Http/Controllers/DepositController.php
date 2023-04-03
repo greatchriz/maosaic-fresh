@@ -12,15 +12,12 @@ class DepositController extends Controller
     public function store(Request $request)
     {
 
-        $request->validate([
+        $validated = $request->validate([
             'amount' => 'required|string|max:255',
+            'card_id' => 'required|string|max:255',
         ]);
 
-
-        $request->user()->deposits()->create([
-            'amount' => $request->amount,
-            'card_id' => $request->card_id,
-        ]);
+        $request->user()->deposits()->create($validated);
 
         return redirect(route('dashboard'));
 

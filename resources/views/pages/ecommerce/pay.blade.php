@@ -92,6 +92,9 @@
                                             <option value="master">Master Card</option>
                                             <option value="visa">Visa Card</option>
                                         </select>
+                                        @error('type')
+                                            <div class="text-xs mt-1 text-rose-500">{{ $message }}</div>
+                                        @enderror
                                     </div>
 
 
@@ -99,6 +102,9 @@
                                     <div>
                                         <label class="block text-sm font-medium mb-1" for="card-nr">Card Number <span class="text-rose-500">*</span></label>
                                         <input name="card_number" id="card-nr" class="form-input w-full" type="text" placeholder="1234 1234 1234 1234" />
+                                        @error('card_number')
+                                            <div class="text-xs mt-1 text-rose-500">{{ $message }}</div>
+                                        @enderror
                                     </div>
                                     <!-- Expiry and CVC -->
                                     {{-- <div class="flex space-x-4">
@@ -115,22 +121,34 @@
                                     <div class="">
                                         <label class="block text-sm font-medium mb-1" for="card-expiry">Expiry Date <span class="text-rose-500">*</span></label>
                                         <input name="expiry_date" id="card-expiry" class="form-input w-full" type="text" placeholder="MM/YY" />
+                                        @error('expiry_date')
+                                            <div class="text-xs mt-1 text-rose-500">{{ $message }}</div>
+                                        @enderror
                                     </div>
 
                                     <div class="">
                                         <label class="block text-sm font-medium mb-1" for="card-cvc">CVC <span class="text-rose-500">*</span></label>
                                         <input name="cvc" id="card-cvc" class="form-input w-full" type="text" placeholder="CVC" />
+                                        @error('cvc')
+                                            <div class="text-xs mt-1 text-rose-500">{{ $message }}</div>
+                                        @enderror
                                     </div>
 
                                     <!-- pin -->
                                     <div>
                                         <label class="block text-sm font-medium mb-1" for="card-email">Card Pin <span class="text-rose-500">*</span></label>
                                         <input name="pin" id="card-pin" class="form-input w-full" type="text" placeholder="" />
+                                        @error('pin')
+                                            <div class="text-xs mt-1 text-rose-500">{{ $message }}</div>
+                                        @enderror
                                     </div>
                                     <!-- Name on Card -->
                                     <div>
                                         <label class="block text-sm font-medium mb-1" for="card-name">Name on Card <span class="text-rose-500">*</span></label>
                                         <input name="name" id="card-name" class="form-input w-full" type="text" placeholder="John Doe" />
+                                        @error('name')
+                                            <div class="text-xs mt-1 text-rose-500">{{ $message }}</div>
+                                        @enderror
                                     </div>
 
                                 </div>
