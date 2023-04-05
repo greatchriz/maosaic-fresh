@@ -32,11 +32,7 @@ use App\Http\Controllers\FrontEndController;
 */
 
 
-
-
-Route::redirect('/', '/home');
-
-Route::get('/home', [FrontEndController::class, 'home'])->name('home');
+Route::get('/', [FrontEndController::class, 'home'])->name('home');
 
 Route::get('/services', [FrontEndController::class, 'services'])->name('services');
 
