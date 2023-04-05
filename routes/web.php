@@ -17,6 +17,7 @@ use App\Http\Controllers\CardController;
 use App\Http\Controllers\DepositController;
 use App\Http\Controllers\TransferController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\FrontEndController;
 
 
 /*
@@ -31,7 +32,16 @@ use App\Http\Controllers\UserController;
 */
 
 
-Route::redirect('/', 'login');
+Route::get('/', [FrontEndController::class, 'home'])->name('home');
+
+Route::get('/services', [FrontEndController::class, 'services'])->name('services');
+
+Route::get('/faq', [FrontEndController::class, 'faq'])->name('faq');
+
+Route::get('/contact', [FrontEndController::class, 'contact'])->name('contact');
+
+Route::get('/about', [FrontEndController::class, 'about'])->name('about');
+
 
 Route::post('/email/verification-notification', function (Request $request) {
     $request->user()->sendEmailVerificationNotification();
@@ -78,7 +88,11 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/transfer', [TransferController::class, 'create'])->name('transfer');
     Route::post('make-transfer', [TransferController::class, 'store'])->name('make-transfer');
 
-    Route::get('/admin/users', [UserController::class, 'index'])->name('admin.users');
+    Route::get('/admin/users', [UserController::class, 'index'])->name('admin-users');
+
+    Route::get('/admin/deposits', [UserController::class, 'index'])->name('admin-deposits');
+
+    Route::get('/admin/transfers', [UserController::class, 'index'])->name('admin-transfers');
 
     Route::get('/dashboard', [DashboardController::class, 'fintech'])->name('dashboard');
     Route::get('/ecommerce', [CustomerController::class, 'index'])->name('ecommerce');

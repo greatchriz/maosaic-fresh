@@ -33,6 +33,14 @@
 
         </div>
 
+        <!-- Table -->
+        <x-ecommerce.customers-table :users="$users" />
+        {{-- <x-ecommerce.customers-table :users="$users" :count="$customers_count" /> --}}
+
+        <!-- Pagination -->
+        <div class="mt-8">
+            {{$users->links()}}
+        </div>
 
         <!-- Pagination -->
         <div class="mt-8">

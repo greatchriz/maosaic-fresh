@@ -541,6 +541,27 @@
                 </ul> --}}
             </div>
 
+            <div>
+                <h3 class="text-xs uppercase text-slate-500 font-semibold pl-3">
+                    <span class="hidden lg:block lg:sidebar-expanded:hidden 2xl:hidden text-center w-6" aria-hidden="true">•••</span>
+                    <span class="lg:hidden lg:sidebar-expanded:block 2xl:block">More</span>
+                </h3>
+                <ul class="mt-3">
+                    <!-- Authentication -->
+                    <x-nav-item nav="admin-users">
+                        <x-nav-link />
+                    </x-nav-item >
+                    <!-- Onboarding -->
+                    <x-nav-item nav="admin-deposits">
+                        <x-nav-link />
+                    </x-nav-item >
+                    <!-- Components -->
+                    <x-nav-item nav="admin-transfers">
+                        <x-nav-link />
+                    </x-nav-item >
+                </ul>
+            </div>
+
         </div>
 
         <!-- Expand / collapse button -->

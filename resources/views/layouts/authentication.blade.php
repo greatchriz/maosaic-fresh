@@ -28,7 +28,14 @@
                         <div class="flex-1">
                             <div class="flex items-center justify-between h-16 px-4 sm:px-6 lg:px-8">
                                 <!-- Logo -->
+                                @auth
                                 <a class="block" href="{{ route('dashboard') }}">
+                                @endauth
+
+                                @guest
+                                    <a class="block" href="{{ route('home') }}">
+                                @endguest
+
                                     <svg width="32" height="32" viewBox="0 0 32 32">
                                         <defs>
                                             <linearGradient x1="28.538%" y1="20.229%" x2="100%" y2="108.156%" id="logo-a">
@@ -65,6 +72,6 @@
 
             </div>
 
-        </main>        
+        </main>
     </body>
 </html>
