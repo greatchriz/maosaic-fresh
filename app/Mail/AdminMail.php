@@ -31,7 +31,7 @@ class AdminMail extends Mailable
     public function content(): Content
     {
         return new Content(
-            markdown: 'emails.admins.custom',
+            view: 'emails.admins.custom',
 
         );
     }
@@ -50,7 +50,6 @@ class AdminMail extends Mailable
             subject: 'Admin don talk',
         );
     }
-
 
     /**
      * Get the attachments for the message.
