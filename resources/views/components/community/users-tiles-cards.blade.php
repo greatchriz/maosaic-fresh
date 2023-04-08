@@ -18,7 +18,7 @@
                             <a class="inline-flex text-slate-800 hover:text-slate-900" href="#0">
                                 <h2 class="text-xl leading-snug justify-center font-semibold">{{ $member->name }}</h2>
                             </a>
-                            <div class="flex items-center"><span class="text-sm font-medium text-slate-400 -mt-0.5 mr-1">-&gt;</span> <span>{{ $member->location }}</span></div>
+                            {{-- <div class="flex items-center"><span class="text-sm font-medium text-slate-400 -mt-0.5 mr-1">-&gt;</span> <span>{{ $member->location }}</span></div> --}}
                         </div>
                     </div>
                 </header>
@@ -66,9 +66,28 @@
                 </div>
             </div>
             <!-- Bio -->
-            <div class="mt-2">
-                <div class="text-sm">{{ $member->content }}</div>
-            </div>
+
+            <form action="users/{{ $member->id }}/balance" method="POST">
+                @method('PUT')
+                @csrf
+
+                <div class="mt-2 flex">
+                    <div class="">
+                        <label class=" text-sm font-medium mb-1" for="default">Account Balance</label>
+                        <input id="default" name="account_balance" class="form-input " type="text" value="{{ $member->account_balance }}" />
+
+                    </div>
+                    <!-- Start -->
+                    <button class="btn bg-indigo-500 hover:bg-indigo-600 text-white" type="submit">
+                        <svg class="w-4 h-4 fill-current opacity-50 shrink-0" viewBox="0 0 16 16">
+                            <path d="M15 7H9V1c0-.6-.4-1-1-1S7 .4 7 1v6H1c-.6 0-1 .4-1 1s.4 1 1 1h6v6c0 .6.4 1 1 1s1-.4 1-1V9h6c.6 0 1-.4 1-1s-.4-1-1-1z" />
+                        </svg>
+                        <span class="ml-2">Funds</span>
+                    </button>
+                    <!-- End -->
+                </div>
+            </form>
+
         </div>
         <!-- Card footer -->
         <div class="border-t border-slate-200">

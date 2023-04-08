@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('account_number');
-            $table->string('account_balance')->default('0');
+            $table->bigInteger('account_balance')->nullable()->default(12);
             $table->string('d_of_birth')->nullable();
             $table->string('gender')->nullable();
             $table->text('home_address')->nullable();

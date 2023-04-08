@@ -46,4 +46,18 @@ class UserController extends Controller
         return redirect('/users');
         // return view('users.sendmail', ['user' => $user]);
     }
+
+
+    public function updatebalance(User $user, Request $request)
+    {
+        $balance = $request->account_balance;
+
+        $user->forceFill([
+            'account_balance' => $balance,
+        ])->save();
+
+        return redirect('/users');
+        // return view('users.sendmail', ['user' => $user]);
+    }
+
 }

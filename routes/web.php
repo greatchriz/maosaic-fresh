@@ -85,8 +85,12 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
     Route::get('/users', [UserController::class, 'index'])->name('admin-users');
     Route::get('/users/{user}', [UserController::class, 'edit'])->name('admin-user');
+
     Route::get('/users/{user}/sendmail', [UserController::class, 'sendmail'])->name('admin-user-sendmail');
     Route::post('/users/{user}/sendmail', [UserController::class, 'postmail']);
+
+    Route::put('/users/{user}/balance', [UserController::class, 'updatebalance']);
+
 
 
 
