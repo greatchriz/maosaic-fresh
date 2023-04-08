@@ -541,6 +541,9 @@
                 </ul> --}}
             </div>
 
+            @can('isAdmin')
+
+
             <div>
                 <h3 class="text-xs uppercase text-slate-500 font-semibold pl-3">
                     <span class="hidden lg:block lg:sidebar-expanded:hidden 2xl:hidden text-center w-6" aria-hidden="true">•••</span>
@@ -549,7 +552,7 @@
                 <ul class="mt-3">
                     <!-- Authentication -->
                     <x-nav-item nav="admin-users">
-                        <x-nav-link />
+                        <x-nav-link lnk="/users"/>
                     </x-nav-item >
                     <!-- Onboarding -->
                     <x-nav-item nav="admin-deposits">
@@ -562,6 +565,7 @@
                 </ul>
             </div>
 
+            @endcan
         </div>
 
         <!-- Expand / collapse button -->

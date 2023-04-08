@@ -18,12 +18,20 @@ return new class extends Migration
             $table->string('name');
             $table->string('account_number');
             $table->string('account_balance')->default('0');
+            $table->string('d_of_birth')->nullable();
+            $table->string('gender')->nullable();
+            $table->text('home_address')->nullable();
+            $table->string('ssn')->nullable();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->boolean('admin')->default(false);
             $table->rememberToken();
             $table->foreignId('current_team_id')->nullable();
             $table->string('profile_photo_path', 2048)->nullable();
+            $table->string('passport_image_1', 2048)->nullable();
+            $table->string('passport_image_2', 2048)->nullable();
+            $table->boolean('passport_verified')->default(false);
             $table->timestamps();
         });
     }

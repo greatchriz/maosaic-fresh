@@ -32,6 +32,7 @@ class User extends Authenticatable implements MustVerifyEmail
         'password',
         'account_number',
         'account_balance',
+        'admin',
 
     ];
 

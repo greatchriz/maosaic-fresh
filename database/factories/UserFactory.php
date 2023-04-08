@@ -26,12 +26,13 @@ class UserFactory extends Factory
     public function definition()
     {
         return [
-            'name' => 'admin',
-            'email' => 'admin@crownagent.org',
+            'name' => $this->faker->name,
+            'email' => $this->faker->unique()->safeEmail,
             'email_verified_at' => now(),
             'password' => Hash::make('password'), // password
             'remember_token' => Str::random(10),
             'account_number' => Str::random(10),
+            'admin' => true,
         ];
     }
 

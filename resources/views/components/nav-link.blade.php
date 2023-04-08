@@ -1,6 +1,7 @@
 @aware(['nav' => 'dashboard'])
 
 
+
 <a class="block text-slate-200 hover:text-white truncate transition duration-150 @if(Request::path() == $nav){{ 'hover:text-slate-200' }}@endif" href="{{ route($nav) }}">
     <div class="flex items-center">
         @if($nav == 'dashboard')

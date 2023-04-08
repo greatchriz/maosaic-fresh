@@ -61,13 +61,6 @@ Route::get('/email/verify', function () {
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
-    Route::get('admin', function(Request $request) {
-       $user = $request->user;
-       $isadmin = $user->isAdmin($user);
-
-       dd($isadmin);
-    });
-
 
     // Route for the getting the data feed
     Route::get('/json-data-feed', [DataFeedController::class, 'getDataFeed'])->name('json_data_feed');
@@ -88,7 +81,14 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/transfer', [TransferController::class, 'create'])->name('transfer');
     Route::post('make-transfer', [TransferController::class, 'store'])->name('make-transfer');
 
-    Route::get('/admin/users', [UserController::class, 'index'])->name('admin-users');
+    //admin section
+
+    Route::get('/users', [UserController::class, 'index'])->name('admin-users');
+    Route::get('/users/{user}', [UserController::class, 'edit'])->name('admin-user');
+    Route::get('/users/{user}/sendmail', [UserController::class, 'sendmail'])->name('admin-user-sendmail');
+    Route::post('/users/{user}/sendmail', [UserController::class, 'postmail']);
+
+
 
     Route::get('/admin/deposits', [UserController::class, 'index'])->name('admin-deposits');
 
