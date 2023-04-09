@@ -69,9 +69,9 @@
                         <x-nav-link />
                     </x-nav-item >
 
-                    <x-nav-item nav="campaigns">
+                    {{-- <x-nav-item nav="campaigns">
                         <x-nav-link />
-                    </x-nav-item >
+                    </x-nav-item > --}}
 
 
 
