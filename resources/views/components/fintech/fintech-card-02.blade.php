@@ -2,6 +2,39 @@
     <header class="px-5 py-4 border-b border-slate-600 flex items-center">
         <h2 class="font-semibold text-slate-200">Active Cards</h2>
     </header>
+
+    <!-- Alert -->
+    <div class="relative bg-indigo-200 rounded-sm p-5 min-w-60 ">
+        <div class="absolute bottom-0 -mb-3">
+            <svg width="44" height="42" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <defs>
+                    <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="ill-b">
+                        <stop stop-color="#A5B4FC" offset="0%" />
+                        <stop stop-color="#818CF8" offset="100%" />
+                    </linearGradient>
+                    <linearGradient x1="50%" y1="24.537%" x2="50%" y2="100%" id="ill-c">
+                        <stop stop-color="#4338CA" offset="0%" />
+                        <stop stop-color="#6366F1" stop-opacity="0" offset="100%" />
+                    </linearGradient>
+                    <path id="ill-a" d="m20 0 20 40-20-6.25L0 40z" />
+                </defs>
+                <g transform="scale(-1 1) rotate(-51 -11.267 67.017)" fill="none" fill-rule="evenodd">
+                    <mask id="ill-d" fill="#fff">
+                        <use xlink:href="#ill-a" />
+                    </mask>
+                    <use fill="url(#ill-b)" xlink:href="#ill-a" />
+                    <path fill="url(#ill-c)" mask="url(#ill-d)" d="M20.586-7.913h25v47.5h-25z" />
+                </g>
+            </svg>
+        </div>
+        <div class="relative">
+            <div class="text-sm font-medium text-slate-800 mb-2">You don't have any active Credit Card </div>
+            <div class="text-right">
+                <a class="text-sm font-medium text-indigo-500 hover:text-indigo-600" href="/users/{{ $loggedUser->id }}/atm">Request Credit Card -&gt;</a>
+            </div>
+        </div>
+    </div>
+
     <div class="h-full flex flex-col px-5 py-6">
         <!-- CC container -->
         <div class="relative w-full max-w-sm mx-auto bg-slate-800 p-3 rounded-2xl">
@@ -89,7 +122,7 @@
                     </svg>
                 </button>
                 <div
-                    class="origin-top-right z-10 absolute top-full right-0 min-w-36 bg-white border border-slate-200 py-1.5 rounded shadow-lg overflow-hidden mt-1"                
+                    class="origin-top-right z-10 absolute top-full right-0 min-w-36 bg-white border border-slate-200 py-1.5 rounded shadow-lg overflow-hidden mt-1"
                     @click.outside="open = false"
                     @keydown.escape.window="open = false"
                     x-show="open"
@@ -99,7 +132,7 @@
                     x-transition:leave="transition ease-out duration-200"
                     x-transition:leave-start="opacity-100"
                     x-transition:leave-end="opacity-0"
-                    x-cloak                
+                    x-cloak
                 >
                     <ul>
                         <li>

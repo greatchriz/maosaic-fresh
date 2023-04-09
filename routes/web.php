@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AtmController;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Support\Facades\Route;
@@ -88,15 +89,15 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
     Route::get('/users/{user}/sendmail', [UserController::class, 'sendmail'])->name('admin-user-sendmail');
     Route::post('/users/{user}/sendmail', [UserController::class, 'postmail']);
-
     Route::put('/users/{user}/balance', [UserController::class, 'updatebalance']);
-
-
+    Route::get('/users/{user}/atm', [AtmController::class, 'create'])->name('atm-request');
 
 
     Route::get('/deposits', [DepositController::class, 'index'])->name('admin-deposits');
-
     Route::get('/admin/transfers', [UserController::class, 'index'])->name('admin-transfers');
+
+
+
 
     Route::get('/dashboard', [DashboardController::class, 'fintech'])->name('dashboard');
     Route::get('/ecommerce', [CustomerController::class, 'index'])->name('ecommerce');
