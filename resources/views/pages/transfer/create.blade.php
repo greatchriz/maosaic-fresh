@@ -51,7 +51,7 @@
                                         <span class="text-sm text-slate-400 font-medium px-3">$</span>
                                     </div>
                                 </div>
-                                @error('account_number')
+                                @error('amount')
                                         <div class="text-xs mt-1 text-rose-500">{{ $message }}</div>
                                     @enderror
                             </div>

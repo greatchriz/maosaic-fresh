@@ -14,9 +14,15 @@ class DepositObserver
      */
     public function created(Deposit $deposit)
     {
-        $total_balance = $deposit->user->balance + $deposit->amount;
 
         $deposit->user->increment('account_balance', $deposit->amount);
+
+        $deposit->createTransactions();
+
+        // $deposit->transactions->create([
+        //     'transaction_id' => '#12345678',
+        //     'status' => false,
+        // ]);
 
         // $deposit->user->update(['account_balance' => $total_balance]);
 

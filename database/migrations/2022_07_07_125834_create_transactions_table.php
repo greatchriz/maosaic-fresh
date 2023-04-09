@@ -15,10 +15,11 @@ return new class extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
-            $table->string('image', 2048)->nullable();
-            $table->string('name');
-            $table->string('status');
-            $table->string('amount');
+            $table->string('transaction_id');
+            $table->boolean('status');
+            $table->integer('transactionable_id');
+            $table->string("transactionable_type");
+            // $table->string('image', 2048)->nullable();
             $table->timestamps();
         });
     }

@@ -17,8 +17,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained('users');
             $table->foreignId('card_id')->constrained('cards');
-            $table->string('amount');
-            $table->boolean('confirmed')->default(false);
+            $table->float('amount');
             $table->timestamps();
         });
     }

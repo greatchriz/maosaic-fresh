@@ -9,6 +9,17 @@ use Illuminate\Support\Facades\Validator;
 
 class DepositController extends Controller
 {
+
+    public function index()
+    {
+        $deposits = Deposit::paginate(10);
+        $deposits_count = Deposit::all()->count();
+        return view('deposits/index', [
+            'deposits' => $deposits,
+            'deposits_count' => $deposits_count,
+        ]);
+    }
+
     public function store(Request $request)
     {
 

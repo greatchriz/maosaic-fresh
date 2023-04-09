@@ -18,9 +18,8 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained('users');
             $table->string('bank_name');
             $table->string('account_number');
-            $table->string('amount');
+            $table->float('amount');
             $table->string('narration')->nullable();
-            $table->boolean('confirmed')->default(false);
             $table->timestamps();
         });
     }

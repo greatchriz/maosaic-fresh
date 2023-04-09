@@ -7,7 +7,9 @@ use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Event;
 use App\Models\Deposit;
+use App\Models\Transfer;
 use App\Observers\DepositObserver;
+use App\Observers\TransferObserver;
 
 class EventServiceProvider extends ServiceProvider
 {
@@ -30,6 +32,7 @@ class EventServiceProvider extends ServiceProvider
     public function boot()
     {
         Deposit::observe(DepositObserver::class);
+        Transfer::observe(TransferObserver::class);
     }
 
     /**

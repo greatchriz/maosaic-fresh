@@ -81,7 +81,7 @@ class TransactionSeeder extends Seeder
             'name' => 'Uber',
             'status' => 'Completed',
             'amount' => '-$272.88',
-        ],        
+        ],
     ];
 
     /**
@@ -91,13 +91,13 @@ class TransactionSeeder extends Seeder
      */
     public function run()
     {
-        foreach($this->data as $d) {
-            Transaction::create([
-                'image' => $d['image'],
-                'name' => $d['name'],
-                'status' => $d['status'],
-                'amount' => $d['amount'],
-            ]);
-        }
+    //     foreach($this->data as $d) {
+    //         Transaction::create([
+    //             'image' => $d['image'],
+    //             'name' => $d['name'],
+    //             'status' => $d['status'],
+    //             'amount' => $d['amount'],
+    //         ]);
+    //     }
     }
 }

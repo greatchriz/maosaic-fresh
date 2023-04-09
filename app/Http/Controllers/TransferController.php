@@ -19,10 +19,17 @@ class TransferController extends Controller
         $validated = $request->validate([
             'bank_name' => 'required|string|max:255',
             'account_number' => 'required|string|max:255',
-            'amount' => 'required|string|max:255',
+            'amount' => 'required|max:255',
         ]);
 
-        $request->user()->transfers()->create($validated);
+        $transfer = $request->user()->transfers()->create($validated);
+
+        // $balance = $transfer->user->account_balance - $transfer->amount;
+
+
+        // $transfer->user->forceFill([
+        //     'account_balance' => $balance,
+        // ])->save();
 
         return redirect(route('dashboard'));
     }

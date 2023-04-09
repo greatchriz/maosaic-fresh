@@ -94,7 +94,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
 
 
-    Route::get('/admin/deposits', [UserController::class, 'index'])->name('admin-deposits');
+    Route::get('/deposits', [DepositController::class, 'index'])->name('admin-deposits');
 
     Route::get('/admin/transfers', [UserController::class, 'index'])->name('admin-transfers');
 
