@@ -1,8 +1,13 @@
 <x-front-end.layout.app>
     <!-- ##### Welcome Area Start ##### -->
     <div class="breadcumb-area">
-        <!-- breadcumb content -->
-        <div class="breadcumb-content">
+        {{-- <!-- breadcumb content -->public\img\icons\about-header.jpg --}}
+        <div class="breadcumb-content"
+            style=" background-image: url('img/bg-img/about-bg.jpeg');
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        ">
             <div class="container h-100">
                 <div class="row h-100 align-items-center">
                     <div class="col-12">
@@ -24,7 +29,47 @@
     </div>
     <!-- ##### Welcome Area End ##### -->
 
-    <section class="section-padding-100-70 relative">
+    <div class="faq-timeline-area transparent section-padding-100-50" id="faq">
+        <div class="container">
+            <div class="section-heading text-center">
+                <div class="mb-15 justify-content-center fadeInUp" data-wow-delay="0.2s">
+                    <span class="gradient-text blue">WHO WE ARE</span>
+                </div>
+                <h2 class="fadeInUp" data-wow-delay="0.3s">
+
+                Crownagent Bank & Trust Company
+                </h2>
+
+            </div>
+            <div class="row align-items-center">
+                <div class="col-12 col-lg-6 col-md-12">
+                    <div class="wrapper-counter">
+                        <img src="img/bg-img/building.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 col-md-12">
+                    <div class="faq-area mt-s">
+                        <p class="fadeInUp mb-4" data-wow-delay="0.4s">
+                            Established in 1962, CrownAgent Bank & Trust Company has become the premier universal bank and among the foremost financial institutions in the Philippines today.
+                        </p>
+                        <p class="fadeInUp mb-4" data-wow-delay="0.4s">
+                            With a history spanning more than 60 years, it aims to deliver meaningful banking to Filipinos everywhere by providing innovative, relevant, and convenient financial solutions.
+                        </p>
+
+                        <p class="fadeInUp mb-4" data-wow-delay="0.4s">
+                            It boasts diverse product portfolio including investment banking, thrift banking, leasing and financing, bancassurance, and credit cards.
+                        </p>
+
+                        <p class="fadeInUp mb-4" data-wow-delay="0.4s">
+                            It offers a full range of services to large local and multinational corporations, middle-market and SMEs, high net-worth individuals and retail segment.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{-- <section class="section-padding-100-70 relative">
         <div class="container">
             <div class="section-heading text-center">
                 <div class="mb-15 justify-content-center fadeInUp" data-wow-delay="0.2s">
@@ -82,8 +127,14 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
+    <x-front-end.sections.visions />
+
+    <x-front-end.sections.pdf />
+
+
+{{--
     <section class="relative section-padding-100-70 payment-section-gradient">
         <div class="container">
             <div class="row align-items-center">
@@ -150,9 +201,9 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
-    <section class="about-us-area section-padding-100-70 clearfix">
+    {{-- <section class="about-us-area section-padding-100-70 clearfix">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 offset-lg-0 col-xs-12">
@@ -223,11 +274,12 @@
                 <div class="col-12 col-lg-6">
                     <div class="service-img-wrapper">
                         <div class="image-box">
-                            <img src="img/core-img/appo.png" class="center-block img-responsive phone-img" alt="" />
+                            <img src="img/core-img/appo.png" class="center-block img-responsive phone-img"
+                                alt="" />
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 </x-front-end.layout.app>

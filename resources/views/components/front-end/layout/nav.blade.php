@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-md navbar-white fixed-top" id="banner">
     <div class="container">
         <!-- Brand -->
-        <a class="navbar-brand" href="#"><span><img src="img/core-img/logo.svg" alt="logo" /></span> crown Agent</a>
+        <a class="navbar-brand" href="/"><span><img src="img/core-img/logo.svg" alt="logo" /></span> Crown Agent</a>
 
         <!-- Toggler/collapsibe Button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">

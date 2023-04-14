@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zxx">
-<!-- Mirrored from masref.netlify.app/index-demo-3.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 05 Apr 2023 00:18:45 GMT -->
+<!-- Mirrored from Crown Agent.netlify.app/index-demo-3.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 05 Apr 2023 00:18:45 GMT -->
 <!-- Added by HTTrack -->
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 
@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
     <!-- Title -->
-    <title>Masref Template</title>
+    <title>Crown Agent Template</title>
 
     <!-- Favicon -->
     <link rel="icon" href="img/core-img/logo.svg" />
@@ -64,7 +64,7 @@
                             <!-- Copywrite -->
                             <div class="copywrite_text fadeInUp" data-wow-delay="0.2s">
                                 <div class="footer-logo">
-                                    <a href="#"><img src="img/core-img/logo.svg" alt="logo" /> Masref
+                                    <a href="#"><img src="img/core-img/logo.svg" alt="logo" /> Crown Agent
                                     </a>
                                 </div>
                                 <p>
@@ -169,6 +169,6 @@
     <script src="js/script.js"></script>
 </body>
 
-<!-- Mirrored from masref.netlify.app/index-demo-3.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 05 Apr 2023 00:19:26 GMT -->
+<!-- Mirrored from Crown Agent.netlify.app/index-demo-3.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 05 Apr 2023 00:19:26 GMT -->
 
 </html>

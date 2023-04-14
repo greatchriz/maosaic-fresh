@@ -1,4 +1,4 @@
-/*** 
+/***
 ====================================================================
   Table of contents
 ====================================================================
@@ -7,28 +7,28 @@
 - Css Imports
 - General Css Styles
 - Header Area style
-- Welcome Area Styles 
+- Welcome Area Styles
 - Partners area style
-- About us area style 
-- services-block-four style 
-- Demo-video area style 
-- Trust area style 
-- services area style 
+- About us area style
+- services-block-four style
+- Demo-video area style
+- Trust area style
+- services area style
 - Call-to-action area style
-- Video area style 
-- Gallery area style 
-- Cool-facts style 
+- Video area style
+- Gallery area style
+- Cool-facts style
 - Price table style
-- Testimonials area style 
+- Testimonials area style
 - Team area style
-- Blog area style 
-- Contact us style 
-- FAQ style -Timeline style 
-- Footer area style 
+- Blog area style
+- Contact us style
+- FAQ style -Timeline style
+- Footer area style
 
 ***/
 
-/*** 
+/***
 
 ====================================================================
   Google fonts
@@ -38,7 +38,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,900');
 
-/*** 
+/***
 
 ====================================================================
   Import All Css
@@ -53,7 +53,7 @@
 @import 'animated-headline.css';
 @import 'font-awesome.min.css';
 @import 'font-icons.css';
-/*** 
+/***
 
 ====================================================================
   General css style
@@ -68,7 +68,7 @@
   width: auto;
   max-width: 500px;
   margin: 20px auto;
-} 
+}
 .other-accounts{
     background: linear-gradient(to right, #21d397 0%, #7450fe 100%);
     margin-top: 30px;
@@ -434,7 +434,7 @@ ol {
     .mt-x{
         margin-top: 30px !important
     }
-    
+
     .main-ilustration-5{
         height: 65vh !important
     }
@@ -454,7 +454,7 @@ ol {
         display: none;
     }
     .spons{
-        border-top: 1px solid #eee 
+        border-top: 1px solid #eee
     }
     .spons img{
         width: 80%
@@ -506,7 +506,7 @@ ol {
 .scew-bg{
     background: url(../img/svg/bg-header1.svg) no-repeat;
     background-size: cover
-    
+
 }
 .sec-before:before{
     content: '';
@@ -543,7 +543,7 @@ ol {
     animation: floating2 7s infinite ;
 }
 @media (max-width: 992px){
-    .sec-before:before, 
+    .sec-before:before,
     .sec-before2:before,
     .sec-before3:before{
         display: none;
@@ -567,7 +567,7 @@ ol {
 .travel-bg{
     background: url(../img/bg-img/travel-bg.html) no-repeat;
     background-size: cover
-    
+
 }
 .relative{
     position: relative;
@@ -715,7 +715,7 @@ ol {
     background-color: #21201e;
     padding: 30px;
     text-align: center;
-    
+
 }
 .reservation .opening-time{
     padding: 30px;
@@ -767,7 +767,7 @@ ol {
 }
 .b-contact__form input:focus{
     outline: 0;
-    border-color: #cea676 
+    border-color: #cea676
 }
 
 #scrollUp {
@@ -803,7 +803,7 @@ ol {
     z-index: 1;
 }
 .has-gradient{
-    background-image: linear-gradient(to right, #21d397 0%, #7450fe 100%); 
+    background-image: linear-gradient(to right, #21d397 0%, #7450fe 100%);
 }
 .has-border-top{
     border-top: 1px solid #eee
@@ -981,10 +981,10 @@ ol {
     background: #cea676
 }
 .info-btn:hover:before{
-    width: 100%; 
+    width: 100%;
 }
 .info-btn:hover{
-    color: #fff; 
+    color: #fff;
 }
 /* ### Clients #####*/
 .client-logo-row {
@@ -1052,7 +1052,7 @@ nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
     transition: padding-top .3s,padding-bottom .3s;
     border: none;
     }
-    
+
  .shrink {
     animation: .3s ease-in-out;
     animation-name: fadeInDown;
@@ -1494,7 +1494,7 @@ nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
         width: 100%
     }
     .subscribe-section .more-btn{
-        margin-left: 0 
+        margin-left: 0
     }
 }
 
@@ -1765,7 +1765,7 @@ nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
 }
 @media (max-width: 992px){
     .main-ilustration-5{
-        height: 65vh 
+        height: 65vh
     }
     .mt-md-30{
         margin-top: 30px !important
@@ -1804,7 +1804,7 @@ nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
         margin-bottom: 30px
     }
     .main-ilustration-6{
-        height: 65vh 
+        height: 65vh
     }
     .welcome-content{
         padding-right: 15px
@@ -1854,7 +1854,7 @@ nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
     .welcome-small-wrapper{
        display: none;
     }
-    
+
 }
 .main-ilustration-2:before{
     content: '';
@@ -1936,7 +1936,7 @@ nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
     font-size: 18px;
     color: #fff;
     margin-bottom: 30px;
-} 
+}
 .gradient-text {
     font-weight: bold;
     display: inline-block;
@@ -2512,7 +2512,7 @@ p.artficial:before{
 
 .about-bg{
     position: relative;
-    
+
 }
 .sky-bg{
     background: #f4f9ff;
@@ -2619,12 +2619,12 @@ p.artficial:before{
 @-webkit-keyframes cloudwash {
   0% {
     -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0); 
+    transform: translate3d(0, 0, 0);
     }
   100% {
     -webkit-transform: translate3d(-50%, 0, 0);
-    transform: translate3d(-50%, 0, 0); 
-    } 
+    transform: translate3d(-50%, 0, 0);
+    }
 }
 
 @keyframes cloudwash {
@@ -2633,7 +2633,7 @@ p.artficial:before{
     transform: translate3d(0, 0, 0); }
   100% {
     -webkit-transform: translate3d(-50%, 0, 0);
-    transform: translate3d(-50%, 0, 0); } 
+    transform: translate3d(-50%, 0, 0); }
 }
 
 .welcome-meter {
@@ -2718,7 +2718,7 @@ p.artficial:before{
 .article p{color: #888}
 .article:hover,
 .article.hover{
-    background-image: linear-gradient(to right, #21d397 0%, #7450fe 100%); 
+    background-image: linear-gradient(to right, #21d397 0%, #7450fe 100%);
 }
 .article:hover .article__title,
 .article:hover p,
@@ -2726,10 +2726,10 @@ p.artficial:before{
 .article.hover .article__title,
 .article.hover p,
 .article.hover .article__icon {
-    color: #fff 
+    color: #fff
 }
 
-/*** 
+/***
 
 ====================================================================
   services-block-four style
@@ -2781,7 +2781,7 @@ p.artficial:before{
 .icon-font-box i{
     font-size: 24px;
     font-weight: 500;
-    color: #2da4ee;    
+    color: #2da4ee;
 }
 @media (max-width: 480px){
     .icon-img-box,
@@ -2968,7 +2968,7 @@ p.artficial:before{
   border-radius: 50%;
   transform: scale(0);
   transition: .7s ease;
-  
+
 }
 .services-block-four .inner-box:hover .icon-box:after {
   transform: scale(1);
@@ -3043,11 +3043,11 @@ p.artficial:before{
   -o-transition:all 0.3s ease;
 }
 .services-block-four .inner-box .icon-box{
-    color: #25cbd3 
+    color: #25cbd3
 }
 
 .services-block-four .inner-box h3 a:hover{
-  
+
 }
 
 .services-block-four .inner-box .text{
@@ -3158,7 +3158,7 @@ p.artficial:before{
 }
 .features-list.v3{
     background: #1e3953;
-    padding: 50px 30px 
+    padding: 50px 30px
 }
  .list-marked li{
     top: 8px;
@@ -3216,7 +3216,7 @@ p.artficial:before{
 
 }
 
-/*** 
+/***
 
 ====================================================================
   Fun-Facts Section styles
@@ -3363,7 +3363,7 @@ p.artficial:before{
 /* Start .agency-sec*/
 .agency-sec{
    background: #fff;
-   padding: 50px 30px 17px 
+   padding: 50px 30px 17px
 }
 .side-feature-list-item.v2 {
     font-size: 14px;
@@ -3716,7 +3716,7 @@ p.artficial:before{
     left: 0;
     -ms-transform: skewY(-6deg);
     transform: skewY(-6deg);
-    
+
 }
 .api-box{
     padding: 50px;
@@ -3870,7 +3870,7 @@ p.artficial:before{
 }
 .steps .item_single_content p{
     margin-bottom: 0;
-    color: #f8efef 
+    color: #f8efef
 }
 .steps .item_single_content.specialitem{
     background: #fff;
@@ -3971,7 +3971,7 @@ p.artficial:before{
 }
 @media (max-width: 992px){
     .how {
-        border-top: 1px solid #eee 
+        border-top: 1px solid #eee
     }
 }
 .how .service_icon .white-icon{
@@ -5315,7 +5315,7 @@ p.artficial:before{
 .main-timeline .description {
     margin-bottom: 0;
     font-size: 14px;
-    color: #d8d0d0 
+    color: #d8d0d0
 }
 
 .main-timeline .timeline:nth-child(2n) .date-content {
@@ -5553,7 +5553,7 @@ p.artficial:before{
     text-transform: uppercase;
 }
 
-/*** 
+/***
 
 ====================================================================
     Facts
@@ -5589,7 +5589,7 @@ p.artficial:before{
     right:0px;
     top:0px;
     width:60px;
-    border-bottom:2px solid #2ec8a6; 
+    border-bottom:2px solid #2ec8a6;
 }
 
 .fact-box .inner::after{
@@ -5598,7 +5598,7 @@ p.artficial:before{
     left:0px;
     top:0px;
     width:60px;
-    border-bottom:2px solid #2ec8a6; 
+    border-bottom:2px solid #2ec8a6;
 }
 
 .fact-box .icon-box{
@@ -5609,7 +5609,7 @@ p.artficial:before{
     width:60px;
     height:60px;
     line-height:48px;
-    font-size:42px; 
+    font-size:42px;
 }
 
 .fact-box .content{
@@ -5671,13 +5671,13 @@ p.artficial:before{
     font-size: 18px;
     text-transform: uppercase;
     margin-bottom: 20px;
-    
+
 }
 .price_table_text > h1 {
     font-size: 48px;
     margin-bottom: 25px;
     line-height: 1;
-    color: #3964f9 
+    color: #3964f9
 }
 
 .price_table_text > p,
@@ -5994,7 +5994,7 @@ p.artficial:before{
 .button i{
     margin-right: 10px
 }
-/*** 
+/***
 
 ====================================================================
     What we do
@@ -6012,7 +6012,7 @@ p.artficial:before{
 
 .what-we-do .outer{
     position:relative;
-    padding-top:20px;   
+    padding-top:20px;
 }
 
 .what-we-do .outer .inner-circle{
@@ -6047,21 +6047,21 @@ p.artficial:before{
     width:500px;
     height:500px;
     border:1px solid #f5f5f5;
-    border-radius:50%;  
+    border-radius:50%;
 }
 
 .what-we-do .outer .header-wraperumn{
-    float:right;    
+    float:right;
 }
 
 .service-box-three{
     position:relative;
     margin-bottom:30px;
-    z-index:1;  
+    z-index:1;
 }
 
 .what-we-do .outer .service-box-three{
-    margin-bottom:50px;    
+    margin-bottom:50px;
 }
 
 .what-we-do .outer .service-box-three:first-child{
@@ -6132,11 +6132,11 @@ p.artficial:before{
 .service-box-four{
     position:relative;
     margin-bottom:30px;
-    z-index:1;  
+    z-index:1;
 }
 
 .what-we-do .outer .service-box-four{
-    margin-bottom:50px;    
+    margin-bottom:50px;
 }
 
 
@@ -6231,9 +6231,9 @@ p.artficial:before{
 }
 @media only screen and (max-width: 1200px){
     .what-we-do .outer .inner-circle{
-        display:none;   
+        display:none;
     }
-    
+
     .what-we-do .outer .service-box-three:first-child,
     .what-we-do .outer .service-box-three:last-child,
     .what-we-do .outer .service-box-four:first-child,
@@ -6247,7 +6247,7 @@ p.artficial:before{
 @media only screen and (max-width: 767px){
     .what-we-do .outer:before,
     .what-we-do .outer:after{
-        display:none;   
+        display:none;
     }
     .what-we-do .outer .service-box-three,
     .what-we-do .outer .service-box-four{
@@ -6257,16 +6257,16 @@ p.artficial:before{
     .what-we-do .outer .service-box-four:last-child,
     .what-we-do .outer .service-box-three,
     .what-we-do .outer .service-box-four{
-        margin-bottom:50px; 
+        margin-bottom:50px;
     }
-    
+
     .service-box-three .inner-box,
     .service-box-four .inner-box{
         padding-left:0px;
         padding-right:0px;
-        text-align:center;  
+        text-align:center;
     }
-    
+
     .service-box-three .icon-box,
     .service-box-four .icon-box{
         position:relative;
@@ -6275,7 +6275,7 @@ p.artficial:before{
         top:0px;
         right:0px;
         bottom:0px;
-        margin:0 auto 30px; 
+        margin:0 auto 30px;
     }
 }
 
@@ -6345,7 +6345,7 @@ p.artficial:before{
   -ms-box-shadow: 0px 0px 20px #DFDFDF;
   -o-box-shadow: 0px 0px 20px #DFDFDF;
   box-shadow: 0px 0px 20px #DFDFDF;
-  
+
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
@@ -6406,8 +6406,8 @@ p.artficial:before{
   background: transparent;
   border: 1px solid #fff;
 }
-.news .news-post .news-post-image .news-category > a:hover, 
-.news .news-post .news-post-image .news-category > a:active, 
+.news .news-post .news-post-image .news-category > a:hover,
+.news .news-post .news-post-image .news-category > a:active,
 .news .news-post .news-post-image .news-category > a:focus {
   text-decoration: none;
 }
@@ -6452,7 +6452,7 @@ p.artficial:before{
 .news .news-post .news-post-meta a i {
   display: inline-block;
   margin-right: 5px;
-  color: #2ec8a6 
+  color: #2ec8a6
 }
 .news .news-post .news-post-meta a:hover, .news .news-post .news-post-meta a:active, .news .news-post .news-post-meta a:focus {
   text-decoration: none;
@@ -7740,7 +7740,7 @@ body.light-version {
     color: #fff
 }
 .light-version .subscribe .group input{
-    border-bottom-color: rgba(255, 255, 255, 0.2) !important 
+    border-bottom-color: rgba(255, 255, 255, 0.2) !important
 }
 .light-version .demo-video{
     background: linear-gradient(to right, #4834d4, #341f97);
@@ -7751,13 +7751,13 @@ body.light-version {
     color: rgba(255,255,255,.7)
 }
 .light-version .our_services_area{
-    padding-bottom: 70px 
+    padding-bottom: 70px
 }
 
 .light-version .service_single_content {
     border-radius: 10px;
     background-color: #fff;
-    background-image: url(../img/core-img/cards-bg.png);
+    /* background-image: url(../img/core-img/cards-bg.png); */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -7781,7 +7781,7 @@ body.light-version {
     background: none
 }
 .token .service_single_content .service_icon{
-    
+
 }
 .token.v2 .service_single_content .service_icon{
     max-width: 60px;
@@ -7866,7 +7866,7 @@ body.light-version {
 .demo-item {
     -webkit-box-shadow: 0 2px 28px rgba(0,0,0,.1);
     box-shadow: 0 2px 28px rgba(0,0,0,.1);
-    transition: all .3s ease-in;   
+    transition: all .3s ease-in;
     overflow: hidden;
     background: #fff;
     margin-bottom: 30px
