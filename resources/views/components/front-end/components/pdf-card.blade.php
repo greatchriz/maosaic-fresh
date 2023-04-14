@@ -67,7 +67,7 @@
                 {{ $slot }}
             </p>
 
-            <a class="text-sm  text-center text-white display-flex align-items-center justify-content-center"
+            <a class="text-sm  text-center text-white d-flex align-items-center justify-content-center"
                 href="https://web-assets.metrobank.com.ph/1654486449-mbtc-aoi.pdf" rel="noreferrer"
                 target="_blank">
 
