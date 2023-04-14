@@ -32,6 +32,8 @@ class DatabaseSeeder extends Seeder
             CampaignSeeder::class,
             MarketerSeeder::class,
             CampaignMarketerSeeder::class,
+            FaqSeeder::class,
+            TestimonialSeeder::class,
         ]);
     }
 }

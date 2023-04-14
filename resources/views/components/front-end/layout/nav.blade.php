@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-md navbar-white fixed-top" id="banner">
     <div class="container">
         <!-- Brand -->
-        <a class="navbar-brand" href="#"><span><img src="img/core-img/logo.png" alt="logo" /></span> Masref</a>
+        <a class="navbar-brand" href="#"><span><img src="img/core-img/logo.svg" alt="logo" /></span> crown Agent</a>
 
         <!-- Toggler/collapsibe Button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -13,29 +13,29 @@
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav ml-auto p-2">
 
-                <x-front-end.nav-item
+                <x-front-end.layout.nav-item
                     nav="home"
                 />
 
-                <x-front-end.nav-item
+                <x-front-end.layout.nav-item
                     nav="about"
                 />
 
-                <x-front-end.nav-item
+                <x-front-end.layout.nav-item
                     nav="services"
                 />
 
-                <x-front-end.nav-item
+                <x-front-end.layout.nav-item
                     nav="faq"
                 />
 
-                <x-front-end.nav-item
+                <x-front-end.layout.nav-item
                     nav="contact"
                 />
 
 
-                {{-- <x-front-end.nav-item>
-                </x-front-end.nav-item> --}}
+                {{-- <x-front-end.layout.nav-item>
+                </x-front-end.layout.nav-item> --}}
 
                 {{-- <li class="nav-item">
                     <a class="nav-link" href="about-us.html">About Us</a>

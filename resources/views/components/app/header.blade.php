@@ -4,7 +4,7 @@
 
             <!-- Header: Left side -->
             <div class="flex">
-                
+
                 <!-- Hamburger button -->
                 <button
                     class="text-slate-500 hover:text-slate-600 lg:hidden"

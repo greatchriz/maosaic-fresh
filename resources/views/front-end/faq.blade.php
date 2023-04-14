@@ -45,6 +45,7 @@
             <div class="col-12 col-lg-6 col-md-12">
                 <div class="faq-area mt-s">
                     <dl style="margin-bottom: 0">
+
                         <!-- Single FAQ Area -->
                         <dt class="wave fadeInUp" data-wow-delay="0.2s">
                             What are the objectives of this Platform?
@@ -57,6 +58,7 @@
                                 corrupti cupiditate ipsum, dolorum voluptatum esse error?
                             </p>
                         </dd>
+
                         <!-- Single FAQ Area -->
                         <dt class="wave fadeInUp" data-wow-delay="0.3s">
                             What is the best features and services we deiver?
