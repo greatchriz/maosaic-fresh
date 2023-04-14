@@ -1,7 +1,7 @@
 <div class="col-6 col-md-6 col-lg-6">
 
     <!-- Content -->
-    <div class="service_single_content text-center mb-100 fadeInUp bg-primary" data-wow-delay="0.2s" style="height: 250px">
+    <div class="service_single_content text-center mb-100 fadeInUp bg-primary" data-wow-delay="0.2s" style="height: 500px">
         <!-- Icon -->
 
         <a href="https://web-assets.metrobank.com.ph/1654486449-mbtc-aoi.pdf" class="text-white text-center text-sm">
