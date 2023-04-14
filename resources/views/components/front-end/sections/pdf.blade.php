@@ -1,4 +1,4 @@
-<section class="section-padding-0-70 bg-white">
+<section class="section-padding-0-70 bg-primary">
     <div class="container">
 
         <div class="row">

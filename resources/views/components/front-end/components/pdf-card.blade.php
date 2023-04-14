@@ -1,10 +1,10 @@
 <div class="col-6 col-md-6 col-lg-6">
 
     <!-- Content -->
-    <div class="service_single_content text-center mb-100 fadeInUp bg-primary" data-wow-delay="0.2s" >
+    <div class="service_single_content text-center mb-100 fadeInUp bg-white" data-wow-delay="0.2s" >
         <!-- Icon -->
 
-        <a href="https://web-assets.metrobank.com.ph/1654486449-mbtc-aoi.pdf" class="text-white text-center text-sm">
+        <a href="https://web-assets.metrobank.com.ph/1654486449-mbtc-aoi.pdf" class=" text-center text-sm">
             <?xml version="1.0" encoding="iso-8859-1"?>
             <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
             <svg fill="#000000" height="60px" width="60px" version="1.1" id="Layer_1"
@@ -59,7 +59,7 @@
                     </g>
                 </g>
             </svg>
-            <p class="text-white mb-15 d-block" style="argin-bottom: 1.5rem;
+            <p class=" mb-15 d-block" style="argin-bottom: 1.5rem;
             text-align: center;
             font-size: 13px;
             line-height: 140%;
@@ -67,7 +67,7 @@
                 {{ $slot }}
             </p>
 
-            <a class="btn btn-default"
+            <a class="btn btn-primary"
                 href="https://web-assets.metrobank.com.ph/1654486449-mbtc-aoi.pdf" rel="noreferrer"
                 target="_blank">
 
