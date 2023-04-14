@@ -67,21 +67,13 @@
                 {{ $slot }}
             </p>
 
-            <a class="text-sm  text-center text-white d-flex align-items-center justify-content-center"
+            <a class="text-sm  btn btn-default"
                 href="https://web-assets.metrobank.com.ph/1654486449-mbtc-aoi.pdf" rel="noreferrer"
                 target="_blank">
 
-                    <span> Download PDF</span>
+                    Download PDF
 
-                    <svg class="mt-15 ml-5"
-                        width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M23 12C23 5.91333 18.0867 1 12 1C5.91334 0.999999 1 5.91333 1 12C1 18.0867 5.91333 23 12 23C18.0867 23 23 18.0867 23 12Z"
-                            fill="white"></path>
-                        <path
-                            d="M15.9126 9.68306C16.1404 9.92714 16.1404 10.3229 15.9126 10.5669L12.4126 14.3169C12.1848 14.561 11.8155 14.561 11.5877 14.3169L8.08768 10.5669C7.85988 10.3229 7.85988 9.92714 8.08768 9.68306C8.31549 9.43898 8.68484 9.43898 8.91264 9.68306L12.0002 12.9911L15.0877 9.68306C15.3155 9.43898 15.6848 9.43898 15.9126 9.68306Z"
-                            fill="#059ED8"></path>
-                    </svg>
+
                 </a>
         </a>
     </div>
