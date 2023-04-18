@@ -2272,6 +2272,9 @@ p.artficial:before{
 .w-text{
     color: #fff !important
 }
+.x-text{
+    color: #192851 !important
+}
 .g-text{
     color: #d8d0d0 !important
 }
@@ -6798,11 +6801,32 @@ textarea:required {
     background: linear-gradient(to right, rgba(72, 52, 212, 0.95), rgba(52, 31, 151, 0.95));
 }
 
+.breadcumb-content-img {
+    position: absolute !important;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .breadcumb--con {
     padding-top: 90px;
 }
 
 .breadcrumb {
+    padding: 0;
+    margin-bottom: 0;
+    list-style: none;
+    background-color: transparent;
+    border-radius: 0;
+}
+
+.dark-breadcrumb {
     padding: 0;
     margin-bottom: 0;
     list-style: none;
@@ -6816,6 +6840,7 @@ textarea:required {
     margin-left: 0;
 }
 
+
 .breadcrumb-item,
 .breadcrumb-item.active,
 .breadcrumb-item > a {
@@ -6823,6 +6848,15 @@ textarea:required {
     text-transform: uppercase;
     color: #fff;
 }
+
+.dark-breadcrumb-item,
+.dark-breadcrumb-item.active,
+.dark-breadcrumb-item > a {
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #192851;
+}
+
 
 .page-item:first-child .page-link {
     margin-left: 0;
@@ -7914,6 +7948,19 @@ body.light-version {
 }
 .preview-demo:hover{
     color: #333
+}
+
+.credit-card-img {
+    position: absolute !important;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 

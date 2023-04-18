@@ -50,7 +50,7 @@
             @endphp
             <x-front-end.sections.faq :faqs="$faqs"/>
             <x-front-end.sections.team />
-            <x-front-end.sections.testimonial :testimonials="$testimonials"/>
+            {{-- <x-front-end.sections.testimonial :testimonials="$testimonials"/> --}}
             <x-front-end.sections.partner />
 
         </div>
@@ -68,9 +68,11 @@
                                     </a>
                                 </div>
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Velit ducimus voluptatibus neque illo id repellat quisquam?
-                                    Autem expedita earum quae laborum ipsum ad.
+                                    For inquiries, please call our Crownagent Contact Center at (02) 88-700-700 (domestic toll-free 1-800-1888-5775) or send an e-mail to customercare@Crownagent.org
+
+
+                                    Crownagent is regulated by the Bangko Sentral ng Pilipinas
+                                    Website: https://www.bsp.gov.ph
                                 </p>
                             </div>
                             <!-- Social Icon -->

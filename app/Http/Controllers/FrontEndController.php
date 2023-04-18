@@ -32,4 +32,21 @@ class FrontEndController extends Controller
     {
         return view('front-end.about');
     }
+
+    public function creditCard ()
+    {
+        return view('front-end.credit-card');
+    }
+
+    public function career ()
+    {
+        return view('front-end.career');
+    }
+
+    // create a method personalOverdraft like the one above and return the view personal-overdraft.blade.php
+    public function personalOverdraft ()
+    {
+        return view('front-end.personal-overdraft');
+    }
+
 }

@@ -7,10 +7,10 @@
             <h2 class="fadeInUp" data-wow-delay="0.3s">
                 Our powerful Partners
             </h2>
-            <p class="fadeInUp" data-wow-delay="0.4s">
+            {{-- <p class="fadeInUp" data-wow-delay="0.4s">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                 quis accumsan nisi Ut ut felis congue nisl hendrerit commodo.
-            </p>
+            </p> --}}
         </div>
         <div class="row">
             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">

@@ -15,22 +15,43 @@
 
                 <x-front-end.layout.nav-item
                     nav="home"
+                    title="Home"
                 />
 
                 <x-front-end.layout.nav-item
                     nav="about"
+                    title="About Us"
                 />
 
                 <x-front-end.layout.nav-item
                     nav="services"
+                    title="Our Services"
                 />
 
                 <x-front-end.layout.nav-item
                     nav="faq"
+                    title="F.A.Q"
                 />
 
                 <x-front-end.layout.nav-item
                     nav="contact"
+                    title="Contact Us"
+                />
+
+                <x-front-end.layout.nav-item
+                    nav="credit-card"
+                    title="Credit Card"
+                />
+
+                <x-front-end.layout.nav-item
+                    nav="career"
+                    title="Career"
+                />
+
+                {{-- initialize a component like the one above with nav=personal-overdraft and title=Personal Overdraft --}}
+                <x-front-end.layout.nav-item
+                    nav="personal-overdraft"
+                    title="Personal Overdraft"
                 />
 
 

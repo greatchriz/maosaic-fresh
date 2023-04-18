@@ -43,6 +43,16 @@ Route::get('/contact', [FrontEndController::class, 'contact'])->name('contact');
 
 Route::get('/about', [FrontEndController::class, 'about'])->name('about');
 
+Route::get('/credit-card', [FrontEndController::class, 'creditCard'])->name('credit-card');
+
+Route::get('/career', [FrontEndController::class, 'career'])->name('career');
+
+// create a personal-overdraft route like the one above
+Route::get('/personal-overdraft', [FrontEndController::class, 'personalOverdraft'])->name('personal-overdraft');
+
+
+
+
 
 Route::post('/email/verification-notification', function (Request $request) {
     $request->user()->sendEmailVerificationNotification();

@@ -1,31 +1,10 @@
 <x-front-end.layout.app>
     <!-- ##### Welcome Area Start ##### -->
     <div class="breadcumb-area">
-        {{-- <!-- breadcumb content -->public\img\icons\about-header.jpg --}}
-        <div class="breadcumb-content"
-            style=" background-image: url('img/bg-img/about-bg.jpeg');
-        background-position: top center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        ">
-            <div class="container h-100">
-                <div class="row h-100 align-items-center">
-                    <div class="col-12">
-                        <nav aria-label="breadcrumb" class="breadcumb--con text-center">
-                            <h2 class="w-text title wow fadeInUp" data-wow-delay="0.2s">
-                                About us
-                            </h2>
-                            <ol class="breadcrumb justify-content-center wow fadeInUp" data-wow-delay="0.4s">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">
-                                    About us
-                                </li>
-                            </ol>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </div>
+        {{-- instantiate a component with the following path views/components/front-end/layout/page-header --}}
+        <x-front-end.layout.page-header style="background-image: url('/img/bg-img/about-bg.jpeg');" title="About Us" />
+
+
     </div>
     <!-- ##### Welcome Area End ##### -->
 

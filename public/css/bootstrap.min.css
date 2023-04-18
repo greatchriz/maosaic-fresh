@@ -4825,14 +4825,37 @@ input[type=submit].btn-block {
     border-radius: .25rem
 }
 
+.dark-breadcrumb {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: .75rem 1rem;
+    margin-bottom: 1rem;
+    list-style: none;
+    background-color: #e9ecef;
+    border-radius: .25rem
+}
+
 .breadcrumb-item+.breadcrumb-item {
+    padding-left: .5rem
+}
+
+.dark-breadcrumb-item+.dark-breadcrumb-item {
     padding-left: .5rem
 }
 
 .breadcrumb-item+.breadcrumb-item::before {
     display: inline-block;
     padding-right: .5rem;
-    color: #6c757d;
+    color: #c8d3dd;
+    content: "/"
+}
+
+.dark-breadcrumb-item+.dark-breadcrumb-item::before {
+    display: inline-block;
+    padding-right: .5rem;
+    color: #192851;
     content: "/"
 }
 
@@ -4840,13 +4863,22 @@ input[type=submit].btn-block {
     text-decoration: underline
 }
 
+.dark-breadcrumb-item+.dark-breadcrumb-item:hover::before {
+    text-decoration: underline
+}
+
 .breadcrumb-item+.breadcrumb-item:hover::before {
+    text-decoration: none
+}
+
+.dark-breadcrumb-item+.dark-breadcrumb-item:hover::before {
     text-decoration: none
 }
 
 .breadcrumb-item.active {
     color: #6c757d
 }
+
 
 .pagination {
     display: -ms-flexbox;
