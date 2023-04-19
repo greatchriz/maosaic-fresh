@@ -8,7 +8,7 @@
                         <span class="gradient-text blue">VISION AND MISSION</span>
                     </div>
                     <h4 class="fadeInUp" data-wow-delay="0.3s">Meaningful Banking from Good Hands.</h4>
-                    <p class="fadeInUp" data-wow-delay="0.4s">We aim to be the country’s premiere financial conglomerate, empowering our individual and business clients to realize their goals and reach their full potential. By creating and customizing financial solutions in response to our stakeholder’s needs, continuously expanding our scope of reach, and leading in community service, we live up to our “You’re in Good Hands” promise that embodies who we are and what we do. We are Metrobank.</p>
+                    <p class="fadeInUp" data-wow-delay="0.4s">We aim to be the country’s premiere financial conglomerate, empowering our individual and business clients to realize their goals and reach their full potential. By creating and customizing financial solutions in response to our stakeholder’s needs, continuously expanding our scope of reach, and leading in community service, we live up to our “You’re in Good Hands” promise that embodies who we are and what we do. We are Crownagent.</p>
 
                     <h4 class="fadeInUp text-left" data-wow-delay="0.3s">We commit to be:</h4>
 

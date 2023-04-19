@@ -75,7 +75,7 @@
                         <h6 class="bold">Creativity and collaboration</h6>
                         {{-- add a margin bottom of 1.5 rem to paragragh tag --}}
                         <p>
-                            We’re growing fast – and no two days here at Starling are quite the same. We care about getting stuff done, not process, and our culture is decidedly entrepreneurial in spirit (you’ll be encouraged to pitch your ideas, however big or bold!). It’s a fast-paced, exciting and creative place to work where there’s plenty of collaboration and ownership of your own projects.
+                            We’re growing fast – and no two days here at Crownagent are quite the same. We care about getting stuff done, not process, and our culture is decidedly entrepreneurial in spirit (you’ll be encouraged to pitch your ideas, however big or bold!). It’s a fast-paced, exciting and creative place to work where there’s plenty of collaboration and ownership of your own projects.
                         </p>
                         <br>
 

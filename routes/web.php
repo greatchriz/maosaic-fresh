@@ -19,6 +19,8 @@ use App\Http\Controllers\DepositController;
 use App\Http\Controllers\TransferController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\FrontEndController;
+use App\Models\Article;
+use Illuminate\Support\Arr;
 
 
 /*
@@ -50,6 +52,8 @@ Route::get('/career', [FrontEndController::class, 'career'])->name('career');
 // create a personal-overdraft route like the one above
 Route::get('/personal-overdraft', [FrontEndController::class, 'personalOverdraft'])->name('personal-overdraft');
 
+// create a protect-yourself route like the one above
+Route::get('/protect-yourself', [FrontEndController::class, 'protectYourself'])->name('protect-yourself');
 
 
 

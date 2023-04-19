@@ -1,5 +1,5 @@
 <!-- ##### Header Area Start ##### -->
-<nav class="navbar navbar-expand-md navbar-white fixed-top" id="banner">
+<nav class="navbar navbar-expand-md navbar-dark fixed-top" id="banner">
     <div class="container">
         <!-- Brand -->
         <a class="navbar-brand" href="/"><span><img src="img/core-img/logo.svg" alt="logo" /></span> Crown Agent</a>
@@ -23,25 +23,27 @@
                     title="About Us"
                 />
 
-                <x-front-end.layout.nav-item
+                {{-- <x-front-end.layout.nav-item
                     nav="services"
                     title="Our Services"
-                />
+                /> --}}
 
                 <x-front-end.layout.nav-item
                     nav="faq"
                     title="F.A.Q"
                 />
 
-                <x-front-end.layout.nav-item
+                {{-- <x-front-end.layout.nav-item
                     nav="contact"
                     title="Contact Us"
-                />
+                /> --}}
 
-                <x-front-end.layout.nav-item
+                {{-- <x-front-end.layout.nav-item
                     nav="credit-card"
                     title="Credit Card"
-                />
+                /> --}}
+
+
 
                 <x-front-end.layout.nav-item
                     nav="career"
@@ -51,8 +53,15 @@
                 {{-- initialize a component like the one above with nav=personal-overdraft and title=Personal Overdraft --}}
                 <x-front-end.layout.nav-item
                     nav="personal-overdraft"
-                    title="Personal Overdraft"
+                    title="Personal Loan"
                 />
+
+                <x-front-end.layout.nav-item
+                    nav="protect-yourself"
+                    title="Protect Yourself"
+                />
+
+
 
 
                 {{-- <x-front-end.layout.nav-item>

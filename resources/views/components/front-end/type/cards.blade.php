@@ -7,7 +7,7 @@
             <h2 class="wow fadeInUp" data-wow-delay="0.3s">Find the right card that fits your lifestyle</h2>
             <p class="wow fadeInUp" data-wow-delay="0.4s">
 
-                Shop, travel, or dine. Whatever your needs are, you can do more with Metrobank Debit and Prepaid cards.
+                Shop, travel, or dine. Whatever your needs are, you can do more with Crownagent Debit and Prepaid cards.
             </p>
         </div>
 

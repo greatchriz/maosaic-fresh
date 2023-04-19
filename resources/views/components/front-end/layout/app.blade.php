@@ -10,8 +10,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <!-- Title -->
-    <title>Crown Agent Template</title>
+
+    @if(request()->path() == '/')
+        <!-- Title -->
+        <title>Crown Agent | Home</title>
+    @elseif(request()->path() == 'about')
+        <!-- Title -->
+        <title>Crown Agent | About</title>
+    @elseif(request()->path() == 'contact')
+        <!-- Title -->
+        <title>Crown Agent | Contact</title>
+    @elseif(request()->path() == 'faq')
+        <!-- Title -->
+        <title>Crown Agent | FAQ</title>
+    @elseif(request()->path() == 'login')
+        <!-- Title -->
+        <title>Crown Agent | Login</title>
+    @elseif(request()->path() == 'register')
+        <!-- Title -->
+        <title>Crown Agent | Register</title>
+    @elseif(request()->path() == 'forgot-password')
+        <!-- Title -->
+        <title>Crown Agent | Forgot Password</title>
+    @elseif(request()->path() == 'reset-password')
+        <!-- Title -->
+        <title>Crown Agent | Reset Password</title>
+    @endif  <!-- Title -->
+
+
+
+
 
     <!-- Favicon -->
     <link rel="icon" href="img/core-img/logo.svg" />
@@ -41,20 +69,6 @@
 
     <!-- ##### Footer Area Start ##### -->
     <footer class="footer-area bg-img">
-        <!-- ##### team Area Start ##### -->
-        <div class="striples-bg">
-
-            @php
-                $faqs = \App\Models\Faq::all();
-                $testimonials = \App\Models\Testimonial::all();
-            @endphp
-            <x-front-end.sections.faq :faqs="$faqs"/>
-            <x-front-end.sections.team />
-            {{-- <x-front-end.sections.testimonial :testimonials="$testimonials"/> --}}
-            <x-front-end.sections.partner />
-
-        </div>
-        <!-- ##### team Area End ##### -->
 
         <div class="footer-content-area mt-0">
             <div class="container">

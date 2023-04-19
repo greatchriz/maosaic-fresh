@@ -4,7 +4,7 @@
     <div class="service_single_content text-center mb-100 fadeInUp bg-white" data-wow-delay="0.2s" >
         <!-- Icon -->
 
-        <a href="https://web-assets.metrobank.com.ph/1654486449-mbtc-aoi.pdf" class=" text-center text-sm">
+        <a href="https://web-assets.Crownagent.com.ph/1654486449-mbtc-aoi.pdf" class=" text-center text-sm">
             <?xml version="1.0" encoding="iso-8859-1"?>
             <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
             <svg fill="#000000" height="60px" width="60px" version="1.1" id="Layer_1"
@@ -68,7 +68,7 @@
             </p>
 
             <a class="btn btn-primary text-center"
-                href="https://web-assets.metrobank.com.ph/1654486449-mbtc-aoi.pdf" rel="noreferrer"
+                href="https://web-assets.Crownagent.com.ph/1654486449-mbtc-aoi.pdf" rel="noreferrer"
                 target="_blank">
 
                     Download PDF

@@ -37,13 +37,13 @@ class FaqSeeder extends Seeder
             ],
 
             [
-                'dt' => 'What browser is Metrobank Online compatible with?',
-                'dd' => 'Metrobank Online is compatible with the following browsers: <br><br>1. Internet Explorer 11 <br>2. Google Chrome <br>3. Mozilla Firefox <br>4. Safari <br><br>For the best experience, we recommend using Google Chrome.',
+                'dt' => 'What browser is Crownagent Online compatible with?',
+                'dd' => 'Crownagent Online is compatible with the following browsers: <br><br>1. Internet Explorer 11 <br>2. Google Chrome <br>3. Mozilla Firefox <br>4. Safari <br><br>For the best experience, we recommend using Google Chrome.',
             ],
 
             [
-                'dt' => 'How secure is it to do bank transactions via Metrobank Online?',
-                'dd' => 'Metrobank Online is secured by SSL (Secure Socket Layer) technology, a standard security technology for establishing an encrypted link between a web server and a browser. This link ensures that all data passed between the web server and browsers remain private and integral. This is the same technology used by online shopping sites.',
+                'dt' => 'How secure is it to do bank transactions via Crownagent Online?',
+                'dd' => 'Crownagent Online is secured by SSL (Secure Socket Layer) technology, a standard security technology for establishing an encrypted link between a web server and a browser. This link ensures that all data passed between the web server and browsers remain private and integral. This is the same technology used by online shopping sites.',
             ],
 
             [
@@ -53,7 +53,7 @@ class FaqSeeder extends Seeder
 
             [
                 'dt' => 'Can I use a different mobile number during enrollment?',
-                'dd' => 'No. When signing up to Metrobank Online, you should use the mobile number you registered with the bank. If you need to update your mobile number, visit any Metrobank branch or request for an update online here.',
+                'dd' => 'No. When signing up to Crownagent Online, you should use the mobile number you registered with the bank. If you need to update your mobile number, visit any Crownagent branch or request for an update online here.',
             ],
 
         ];

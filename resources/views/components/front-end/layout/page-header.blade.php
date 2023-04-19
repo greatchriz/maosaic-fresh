@@ -7,7 +7,7 @@
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-12">
-                    <nav aria-label="breadcrumb" class="breadcumb--con text-center">
+                    <nav aria-label="breadcrumb" class="breadcumb--con text-center mt-20">
                         {{-- check if request path has personal-overdraft change w-text class in h2 tag to x-text --}}
                         @if (request()->path() == 'personal-overdraft')
                             <h2 class="x-text title wow fadeInUp" data-wow-delay="0.2s">
