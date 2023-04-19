@@ -7,6 +7,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\AdminMail;
+use App\Models\Adminmailcontent;
 
 class UserController extends Controller
 {
@@ -40,8 +41,10 @@ class UserController extends Controller
     {
 
         $input = $request->all();
+        // query the adminsmail table and get the title and body of the first model
+        $adminmailcontent = Adminmailcontent::first();
 
-        Mail::to($user)->send(new AdminMail($user, $input));
+        Mail::to($user)->send(new AdminMail($user, $adminmailcontent));
 
         return redirect('/users');
         // return view('users.sendmail', ['user' => $user]);

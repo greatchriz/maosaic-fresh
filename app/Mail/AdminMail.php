@@ -16,11 +16,11 @@ class AdminMail extends Mailable
 
 
     public $user;
-    public $input;
+    public $adminmailcontent;
 
-    public function __construct(User $user, $input)
+    public function __construct(User $user, $adminmailcontent)
     {
-        $this->input = $input;
+        $this->adminmailcontent = $adminmailcontent;
         $this->user = $user;
     }
 
