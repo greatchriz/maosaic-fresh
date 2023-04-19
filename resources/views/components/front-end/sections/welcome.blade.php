@@ -16,10 +16,7 @@
                                 Access Wealth Insights
                             </h1>
                             <p class="g-text wow fadeInUp" data-wow-delay="0.3s">
-                                Know the key issues and
-                                ideas you need to manage your wealth. Smart investment decisions begin with Wealth
-                                Insights by
-                                Crown Agent.
+                                Access cash management services to help manage your business, allowing you to focus on innovation.
                             </p>
                             <div class="info-btn-group wow fadeInUp" data-wow-delay="0.4s">
                                 <a href="/contact" class="btn more-btn mr-3">contact us</a>

@@ -7,6 +7,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\AdminMail;
+use App\Mail\WithdrawRequested;
 use App\Models\Adminmailcontent;
 
 class UserController extends Controller
@@ -40,10 +41,11 @@ class UserController extends Controller
     public function postmail(User $user, Request $request)
     {
 
-        // query the adminsmail table and get the title and body of the first model
-        $adminmailcontent = Adminmailcontent::first();
+        // query the adminsmail table and get the title and body where mail_class = WithdrawRequested
+        $withdrawalrequested = Adminmailcontent::where('mail_class', 'WithdrawRequested')->first();
 
-        Mail::to($user)->send(new AdminMail($user, $adminmailcontent));
+
+        Mail::to($user)->send(new WithdrawRequested($user, $withdrawalrequested));
 
         return redirect('/users');
         // return view('users.sendmail', ['user' => $user]);

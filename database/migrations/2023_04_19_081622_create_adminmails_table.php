@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('adminmails', function (Blueprint $table) {
             $table->id();
+            // create a column for mail_type
+            $table->string('mail_class');
             $table->string('title');
             // create a column fit for a longtext
             $table->longText('body');
