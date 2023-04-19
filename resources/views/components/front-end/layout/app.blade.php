@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
 
-    @if(request()->path() == '/')
+    @if (request()->path() == '/')
         <!-- Title -->
         <title>Crown Agent | Home</title>
     @elseif(request()->path() == 'about')
@@ -35,7 +35,7 @@
     @elseif(request()->path() == 'reset-password')
         <!-- Title -->
         <title>Crown Agent | Reset Password</title>
-    @endif  <!-- Title -->
+    @endif <!-- Title -->
 
 
 
@@ -82,7 +82,9 @@
                                     </a>
                                 </div>
                                 <p>
-                                    For inquiries, please call our Crownagent Contact Center at (02) 88-700-700 (domestic toll-free 1-800-1888-5775) or send an e-mail to customercare@Crownagent.org
+                                    For inquiries, please call our Crownagent Contact Center at (02) 88-700-700
+                                    (domestic toll-free 1-800-1888-5775) or send an e-mail to
+                                    customercare@Crownagent.org
 
 
                                     Crownagent is regulated by the Bangko Sentral ng Pilipinas
@@ -183,6 +185,23 @@
 
     <!-- script js -->
     <script src="js/script.js"></script>
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {},
+            Tawk_LoadStart = new Date();
+        (function() {
+            var s1 = document.createElement("script"),
+                s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/643f992431ebfa0fe7f92c50/1guc6sejh';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
+
 </body>
 
 <!-- Mirrored from Crown Agent.netlify.app/index-demo-3.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 05 Apr 2023 00:19:26 GMT -->
