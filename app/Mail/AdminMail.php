@@ -47,7 +47,7 @@ class AdminMail extends Mailable
     {
 
         return new Envelope(
-            subject: 'Admin don talk',
+            subject: 'You Requested a Withdrawal',
         );
     }
 

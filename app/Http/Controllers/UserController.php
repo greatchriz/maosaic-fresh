@@ -40,7 +40,6 @@ class UserController extends Controller
     public function postmail(User $user, Request $request)
     {
 
-        $input = $request->all();
         // query the adminsmail table and get the title and body of the first model
         $adminmailcontent = Adminmailcontent::first();
 
