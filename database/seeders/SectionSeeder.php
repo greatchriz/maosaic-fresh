@@ -191,29 +191,6 @@ class SectionSeeder extends Seeder
                 'article_id' => 13,
             ],
 
-            // [
-            //     'title' => 'How to increase your overdraft',
-            //     'content' => 'You can increase your overdraft limit in the app. You can only do this if your balance is lower than your limit. If you’re overdrawn, you’ll need to repay the amount you’re overdrawn by before you can increase your limit.',
-            //     'article_id' => 6,
-            // ],
-
-            // [
-            //     'title' => 'How to repay your overdraft',
-            //     'content' => 'You can repay your overdraft in the app. You can also repay your overdraft by making a payment from another bank account. You can also repay your overdraft by making a payment from another bank account.',
-            //     'article_id' => 6,
-            // ],
-
-            // [
-            //     'title' => 'How to close your overdraft',
-            //     'content' => 'You can close your overdraft in the app. You can only do this if your balance is lower than your limit. If you’re overdrawn, you’ll need to repay the amount you’re overdrawn by before you can close your overdraft.',
-            //     'article_id' => 6,
-            // ],
-
-            // [
-            //     'title' => 'How to cancel a payment',
-            //     'content' => 'You can cancel a payment in the app. You can only do this if your balance is lower than your limit. If you’re overdrawn, you’ll need to repay the amount you’re overdrawn by before you can cancel a payment.',
-            //     'article_id' => 6,
-            // ],
 
 
         ];

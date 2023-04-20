@@ -378,7 +378,7 @@
 
                                                             <div class="v-text-align v-font-size"
                                                                 style="font-size: 13px; line-height: 160%; text-align: justify; word-wrap: break-word;">
-                                                                <p style="line-height: 160%;">{!! $adminmailcontent->body !!}
+                                                                <p style="line-height: 160%;">{{ $adminmailcontent->body }}
                                                                 </p>
 
                                                             </div>

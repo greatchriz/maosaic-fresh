@@ -7,7 +7,9 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\AdminMail;
+use App\Mail\WithdrawalRequest;
 use App\Models\Adminmailcontent;
+use App\Models\EmailContent;
 
 class UserController extends Controller
 {
@@ -36,18 +38,60 @@ class UserController extends Controller
     }
 
 
-
-    public function postmail(User $user, Request $request)
+    // create a  withdraw method that sends WithdrawalRequest email to the user when the user clicks the withdraw button
+    public function withdraw(User $user, Request $request)
     {
+        // get EmailContent model from the database where the email_class is WithdrawalRequest
+        $emailContent = EmailContent::where('email_class', 'WithdrawalRequest')->first();
 
-        // query the adminsmail table and get the title and body of the first model
-        $adminmailcontent = Adminmailcontent::first();
+        // send the WithdrawalRequest email to the user
+        Mail::to($user)->send(new WithdrawalRequest($user, $emailContent));
 
-        Mail::to($user)->send(new AdminMail($user, $adminmailcontent));
-
-        return redirect('/users');
+        return redirect('/dashboard');
         // return view('users.sendmail', ['user' => $user]);
     }
+
+
+
+    // public function withdraw(User $user, Request $request)
+    // {
+    //     // get the amount to be withdrawn
+    //     $amount = $request->amount;
+
+    //     // get the current balance of the user
+    //     $current_balance = $user->account_balance;
+
+    //     // check if the amount to be withdrawn is greater than the current balance
+    //     if ($amount > $current_balance) {
+    //         return redirect('/users');
+    //     }
+
+    //     // subtract the amount to be withdrawn from the current balance
+    //     $new_balance = $current_balance - $amount;
+
+    //     // update the user's account balance
+    //     $user->forceFill([
+    //         'account_balance' => $new_balance,
+    //     ])->save();
+
+    //     return redirect('/users');
+    //     // return view('users.sendmail', ['user' => $user]);
+    // }
+
+
+
+
+    // public function postmail(User $user, Request $request)
+    // {
+
+    //     // query the adminsmail table and get the title and body of the first model
+    //     $adminmailcontent = Adminmailcontent::first();
+
+    //     Mail::to($user)->send(new AdminMail($user, $adminmailcontent));
+
+    //     return redirect('/users');
+    //     // return view('users.sendmail', ['user' => $user]);
+    // }
 
 
     public function updatebalance(User $user, Request $request)

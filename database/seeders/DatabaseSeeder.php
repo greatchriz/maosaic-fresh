@@ -37,6 +37,7 @@ class DatabaseSeeder extends Seeder
             ArticleSeeder::class,
             SectionSeeder::class,
             AdminmailSeeder::class,
+            EmailContentSeeder::class,
         ]);
     }
 }
