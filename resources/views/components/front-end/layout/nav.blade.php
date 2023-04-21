@@ -2,7 +2,8 @@
 <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="banner">
     <div class="container">
         <!-- Brand -->
-        <a class="navbar-brand" href="/"><span><img src="img/core-img/logo.svg" alt="logo" /></span> Crown Agent</a>
+        <a class="navbar-brand" href="/"><span><img src="img/core-img/logo.svg" alt="logo" /></span> Crown
+            Agent</a>
 
         <!-- Toggler/collapsibe Button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -13,89 +14,59 @@
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav ml-auto p-2">
 
-                <x-front-end.layout.nav-item
-                    nav="home"
-                    title="Home"
-                />
-
-                <x-front-end.layout.nav-item
-                    nav="about"
-                    title="About Us"
-                />
-
-                {{-- <x-front-end.layout.nav-item
-                    nav="services"
-                    title="Our Services"
-                /> --}}
-
-                <x-front-end.layout.nav-item
-                    nav="faq"
-                    title="F.A.Q"
-                />
-
-                {{-- <x-front-end.layout.nav-item
-                    nav="contact"
-                    title="Contact Us"
-                /> --}}
-
-                {{-- <x-front-end.layout.nav-item
-                    nav="credit-card"
-                    title="Credit Card"
-                /> --}}
+                {{-- home --}}
+                {{-- about --}}
+                {{-- faq --}}
+                {{-- career --}}
+                {{-- personal-overdraft --}}
+                {{-- protect-yourself --}}
+                {{-- usa-transfer --}}
 
 
-
-                <x-front-end.layout.nav-item
-                    nav="career"
-                    title="Career"
-                />
-
-                {{-- initialize a component like the one above with nav=personal-overdraft and title=Personal Overdraft --}}
-                <x-front-end.layout.nav-item
-                    nav="personal-overdraft"
-                    title="Personal Loan"
-                />
-
-                <x-front-end.layout.nav-item
-                    nav="protect-yourself"
-                    title="Protect Yourself"
-                />
-
-
-
-
-                {{-- <x-front-end.layout.nav-item>
-                </x-front-end.layout.nav-item> --}}
-
-                {{-- <li class="nav-item">
-                    <a class="nav-link" href="about-us.html">About Us</a>
+                {{-- home --}}
+                <li class="nav-item m-1">
+                    <x-front-end.layout.nav-item nav="home" title="Home" type="normal" :active="Request::path() == 'home'" />
                 </li>
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Home</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="index-demo-1.html">Home style 1</a>
-                        <a class="dropdown-item" href="index-demo-2.html">Home style 2</a>
-                        <a class="dropdown-item" href="index-demo-3.html">Home style 3</a>
-                        <a class="dropdown-item" href="index-demo-4.html">Home style 4</a>
-                    </div>
+                {{-- about --}}
+                <li class="nav-item m-1">
+                    <x-front-end.layout.nav-item nav="about" title="About Us" type="normal" :active="Request::path() == 'about'" />
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="services.html">Services</a>
+                {{-- faq --}}
+                <li class="nav-item m-1">
+                    <x-front-end.layout.nav-item nav="faq" title="F.A.Q." type="normal" :active="Request::path() == 'faq'" />
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="faq.html">FAQ</a>
+
+                {{-- career --}}
+                <li class="nav-item m-1">
+                    <x-front-end.layout.nav-item nav="career" title="Careers" type="normal" :active="Request::path() == 'career'" />
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="pricing.html">Pricing</a>
+
+                {{-- personal-overdraft --}}
+                <li class="nav-item m-1">
+                    <x-front-end.layout.nav-item nav="personal-overdraft" title="Personal Overdraft" type="normal" :active="Request::path() == 'personal-overdraft'" />
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact-us.html">Contact</a>
-                </li> --}}
-                <a href="{{ route('login') }}" class="btn login-btn mr-im">Log in</a>
+
+                {{-- protect-yourself --}}
+                <li class="nav-item m-1">
+                    <x-front-end.layout.nav-item nav="protect-yourself" title="Protect Yourself" type="normal" :active="Request::path() == 'protect-yourself'" />
+                </li>
+
+
+
+                @auth
+                    <x-front-end.layout.nav-item nav="dashboard" title="Dashboard" type="speclial" />
+                @else
+                    <x-front-end.layout.nav-item nav="login" title="Log In" type="speclial" />
+
+                    <x-front-end.layout.nav-item nav="register" title="Sign Up" type="speclial" />
+                @endauth
+                {{-- nav-link  --}}
+
+                {{-- <a href="{{ route('login') }}" class="btn login-btn mr-im">Log in</a>
                 <a href="{{ route('register') }}" class="btn login-btn login-last">Signup
-                </a>
+                </a> --}}
             </ul>
         </div>
     </div>
