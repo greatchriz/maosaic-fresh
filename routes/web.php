@@ -34,26 +34,26 @@ use Illuminate\Support\Arr;
 |
 */
 
-// home
-// about
-// faq
-// career
-// personal-overdraft
-// protect-yourself
-// usa-transfer
 
 Route::get('/', [FrontEndController::class, 'home'])->name('home');
 
-Route::get('/about', [FrontEndController::class, 'about'])->name('about');
+Route::get('/services', [FrontEndController::class, 'services'])->name('services');
 
 Route::get('/faq', [FrontEndController::class, 'faq'])->name('faq');
 
+Route::get('/contact', [FrontEndController::class, 'contact'])->name('contact');
+
+Route::get('/about', [FrontEndController::class, 'about'])->name('about');
+
+Route::get('/credit-card', [FrontEndController::class, 'creditCard'])->name('credit-card');
+
 Route::get('/career', [FrontEndController::class, 'career'])->name('career');
 
+// create a personal-overdraft route like the one above
 Route::get('/personal-overdraft', [FrontEndController::class, 'personalOverdraft'])->name('personal-overdraft');
 
+// create a protect-yourself route like the one above
 Route::get('/protect-yourself', [FrontEndController::class, 'protectYourself'])->name('protect-yourself');
-
 
 
 
