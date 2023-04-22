@@ -13,7 +13,7 @@ use App\Models\Card;
 use App\Models\Deposit;
 use App\Models\Transfer;
 
-class User extends Authenticatable implements MustVerifyEmail
+class User extends Authenticatable
 {
     use HasApiTokens;
     use HasFactory;
