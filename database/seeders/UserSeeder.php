@@ -50,15 +50,6 @@ class UserSeeder extends Seeder
                 'admin' => true,
             ],
 
-            [
-                'name' => 'chriz',
-                'email' => 'great.chriz@gmail.com',
-                'email_verified_at' => now(),
-                'password' => Hash::make('password'), // password
-                'remember_token' => Str::random(10),
-                'account_number' => Str::random(10),
-                'admin' => false,
-            ],
         ];
 
         foreach($data as $d) {
