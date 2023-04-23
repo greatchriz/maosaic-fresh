@@ -2,8 +2,7 @@
 {{-- Header --}}
 <x-slot:header>
 <x-mail::header :url="config('app.url')">
-{{ config('app.name') }}
-
+    <img src="https://crownagent.org/img/core-img/crownagent_logo.png" class="" alt="Laravel Logo">
 </x-mail::header>
 </x-slot:header>
 

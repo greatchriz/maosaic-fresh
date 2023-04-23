@@ -8,7 +8,5 @@
 {{ $slot }}
 @endif
 </a>
-
-<p>the office of the admistrator</p>
 </td>
 </tr>
