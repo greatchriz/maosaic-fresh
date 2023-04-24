@@ -29,6 +29,11 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
+        // total_deposits
+        // total_transfers
+        // total_withdrawals
+        // total_loans
+
          $data = [
             [
                 'name' => 'test',
@@ -36,8 +41,12 @@ class UserSeeder extends Seeder
                 'email_verified_at' => now(),
                 'password' => Hash::make('password'), // password
                 'remember_token' => Str::random(10),
-                'account_number' => Str::random(10),
+                'account_number' => mt_rand(2000000000, 2999999999),
                 'admin' => false,
+                'total_deposits' => '4000',
+                'total_transfers' => '4000',
+                'total_withdrawals' => '4000',
+                'total_loans' => '4000',
             ],
 
             [
@@ -46,8 +55,12 @@ class UserSeeder extends Seeder
                 'email_verified_at' => now(),
                 'password' => Hash::make('password'), // password
                 'remember_token' => Str::random(10),
-                'account_number' => Str::random(10),
+                'account_number' => mt_rand(2000000000, 2999999999),
                 'admin' => true,
+                'total_deposits' => '4000',
+                'total_transfers' => '4000',
+                'total_withdrawals' => '4000',
+                'total_loans' => '4000',
             ],
 
         ];
@@ -61,6 +74,10 @@ class UserSeeder extends Seeder
                 'remember_token' => $d['remember_token'],
                 'account_number' => $d['account_number'],
                 'admin' => $d['admin'],
+                'total_deposits' => $d['total_deposits'],
+                'total_transfers' => $d['total_transfers'],
+                'total_withdrawals' => $d['total_withdrawals'],
+                'total_loans' => $d['total_loans'],
             ]);
         }
 

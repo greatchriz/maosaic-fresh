@@ -25,7 +25,7 @@
             <!-- Header: Right side -->
             <div class="flex items-center space-x-3">
 
-                <!-- Search Button with Modal -->
+                {{-- <!-- Search Button with Modal -->
                 <x-modal-search />
 
                 <!-- Notifications button -->
@@ -35,7 +35,7 @@
                 <x-dropdown-help align="right" />
 
                 <!-- Divider -->
-                <hr class="w-px h-6 bg-slate-200" />
+                <hr class="w-px h-6 bg-slate-200" /> --}}
 
                 <!-- User button -->
                 <x-dropdown-profile align="right" />

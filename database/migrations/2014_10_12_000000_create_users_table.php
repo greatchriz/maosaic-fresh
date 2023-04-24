@@ -31,6 +31,15 @@ return new class extends Migration
             $table->string('profile_photo_path', 2048)->nullable();
             $table->string('passport_image_1', 2048)->nullable();
             $table->string('passport_image_2', 2048)->nullable();
+            // total_deposits
+            // total_transfers
+            // total_withdrawals
+            // total_loans
+
+            $table->string('total_deposits')->nullable()->default(4000);
+            $table->string('total_transfers')->nullable()->default(4000);
+            $table->string('total_withdrawals')->nullable()->default(4000);
+            $table->string('total_loans')->nullable()->default(4000);
             $table->boolean('passport_verified')->default(false);
             $table->timestamps();
         });

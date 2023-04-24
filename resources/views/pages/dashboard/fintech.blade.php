@@ -33,6 +33,24 @@
             <!-- Page Intro -->
             <x-fintech.fintech-intro />
 
+            {{-- Account Number --}}
+            <x-fintech.fintech-account-number image="images/bank.png" title="Account Number" :content="$loggedUser->account_number" />
+
+                {{-- Registered At --}}
+            <x-fintech.fintech-account-number image="images/schedule.png" title="Registeration Date" :content="$loggedUser->created_at" />
+
+                {{-- Total Deposits --}}
+            <x-fintech.fintech-account-number image="images/deposit.png" title="Total Deposits" :content="$loggedUser->total_deposits" />
+
+                {{-- Total Transfers --}}
+            <x-fintech.fintech-account-number image="images/money-transfer.png" title="Total Transfers" :content="$loggedUser->total_transfers" />
+
+                {{-- Total Withdraws --}}
+            <x-fintech.fintech-account-number image="images/withdrawal.png" title="Total Withdraws" :content="$loggedUser->total_withdrawals" />
+
+                {{-- Total Withdraws --}}
+            <x-fintech.fintech-account-number image="images/loan.png" title="Total Loans" :content="$loggedUser->total_loans" />
+
             <!-- Line chart (Portfolio Returns) -->
             <x-fintech.fintech-card-01 />
 

@@ -13,7 +13,7 @@ use App\Models\Card;
 use App\Models\Deposit;
 use App\Models\Transfer;
 
-class User extends Authenticatable implements MustVerifyEmail
+class User extends Authenticatable
 {
     use HasApiTokens;
     use HasFactory;
@@ -27,12 +27,19 @@ class User extends Authenticatable implements MustVerifyEmail
      * @var string[]
      */
     protected $fillable = [
+
         'name',
         'email',
         'password',
         'account_number',
         'account_balance',
         'admin',
+        'total_deposits',
+        'total_transfers',
+        'total_withdrawals',
+        'total_loans',
+
+
 
     ];
 
@@ -84,6 +91,42 @@ class User extends Authenticatable implements MustVerifyEmail
     public function transfers()
     {
         return $this->hasMany(Transfer::class);
+    }
+
+    // create an accesosor for the created_at attribute
+    public function getCreatedAtAttribute($value)
+    {
+        return \Carbon\Carbon::parse($value)->diffForHumans();
+    }
+
+    // create an accesosor for the account_balance attribute
+    public function getAccountBalanceAttribute($value)
+    {
+        return '$' .number_format($value, 2);
+    }
+
+    // create an accesosor for the total_deposits attribute
+    public function getTotalDepositsAttribute($value)
+    {
+        return '$' .number_format($value, 2);
+    }
+
+    // create an accesosor for the total_transfers attribute
+    public function getTotalTransfersAttribute($value)
+    {
+        return '$' .number_format($value, 2);
+    }
+
+    // create an accesosor for the total_withdrawals attribute
+    public function getTotalWithdrawalsAttribute($value)
+    {
+        return '$' .number_format($value, 2);
+    }
+
+    // create an accesosor for the total_loans attribute
+    public function getTotalLoansAttribute($value)
+    {
+        return '$' .number_format($value, 2);
     }
 
 }

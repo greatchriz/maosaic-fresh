@@ -64,3 +64,8 @@ can run the following command in your terminal window.
 You should receive a message similar to this
 ``Starting Laravel development server: http://127.0.0.1:8000`` simply copy the URL
 in your browser and you'll be ready to test out your new mosaic laravel app.
+
+
+php artisan make:mail UsersTransfersSender --markdown=users.transfers.sender
+
+php artisan make:mail UsersTransfersReceiver --markdown=users.transfers.receiver
