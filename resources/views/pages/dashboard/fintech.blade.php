@@ -6,7 +6,7 @@
 
             <!-- Left: Title -->
             <div class="mb-4 sm:mb-0">
-                <h1 class="text-2xl md:text-3xl text-slate-800 font-bold">Fintech ✨</h1>
+                <h1 class="text-2xl md:text-3xl text-slate-800 font-bold"> {{ $loggedUser->name }} ✨</h1>
             </div>
 
             <!-- Right: Actions -->
@@ -33,11 +33,11 @@
             <!-- Page Intro -->
             <x-fintech.fintech-intro />
 
+            {{-- Account Balance --}}
+            <x-fintech.fintech-account-number image="images/account.png" title="Account Balance" :content="$loggedUser->account_balance" />
+
             {{-- Account Number --}}
             <x-fintech.fintech-account-number image="images/bank.png" title="Account Number" :content="$loggedUser->account_number" />
-
-                {{-- Registered At --}}
-            <x-fintech.fintech-account-number image="images/schedule.png" title="Registeration Date" :content="$loggedUser->created_at" />
 
                 {{-- Total Deposits --}}
             <x-fintech.fintech-account-number image="images/deposit.png" title="Total Deposits" :content="$loggedUser->total_deposits" />
@@ -50,6 +50,9 @@
 
                 {{-- Total Withdraws --}}
             <x-fintech.fintech-account-number image="images/loan.png" title="Total Loans" :content="$loggedUser->total_loans" />
+
+                    {{-- Registered At --}}
+            <x-fintech.fintech-account-number image="images/schedule.png" title="Registeration Date" :content="$loggedUser->created_at" />
 
             <!-- Line chart (Portfolio Returns) -->
             <x-fintech.fintech-card-01 />
