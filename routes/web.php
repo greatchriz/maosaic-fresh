@@ -35,6 +35,8 @@ use Illuminate\Support\Arr;
 */
 
 
+
+
 Route::get('/', [FrontEndController::class, 'home'])->name('home');
 
 Route::get('/services', [FrontEndController::class, 'services'])->name('services');
@@ -73,8 +75,16 @@ Route::get('/protect-yourself', [FrontEndController::class, 'protectYourself'])-
 // Route::get('/email/verify', function () {
 //     return view('auth.verify-email');
 // })->middleware('auth')->name('verification.notice');
+// Route::get('/mailable', function () {
+//     $notifiable = App\Models\User::find(1);
+//     $url = 'http://localhost:8000/email/verify/1/1';
+
+//     return new App\Mail\UserEmailVerification($url);
+// });
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
+
+
 
 
     // Route for the getting the data feed
