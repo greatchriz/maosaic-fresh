@@ -98,8 +98,12 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
     // deposit
     Route::get('/deposit', function () {
-        return view('pages/finance/credit-cards');
+        // return view pages/finance/deposit with flash message
+        // return redirect('dashboard')->with('success', 'Deposit successful');
+        return view('pages/finance/deposit')->with('success', 'Deposit successful');
+
     })->name('deposit');
+
     Route::post('make-deposit', [DepositController::class, 'store'])->name('make-deposit');
 
     // transfers
@@ -124,8 +128,9 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
 
 
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
-    Route::get('/dashboard', [DashboardController::class, 'fintech'])->name('dashboard');
+    Route::get('/fintech', [DashboardController::class, 'fintech'])->name('fintech');
     Route::get('/ecommerce', [CustomerController::class, 'index'])->name('ecommerce');
     Route::get('/ecommerce/orders', [OrderController::class, 'index'])->name('orders');
     Route::get('/ecommerce/invoices', [InvoiceController::class, 'index'])->name('invoices');

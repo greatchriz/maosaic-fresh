@@ -7,6 +7,7 @@
     use App\Models\DataFeed;
     use Carbon\Carbon;
 
+
     class DashboardController extends Controller
     {
 
@@ -17,9 +18,8 @@
          */
         public function index()
         {
-            $dataFeed = new DataFeed();
-
-            return view('pages/dashboard/dashboard', compact('dataFeed'));
+            //return redirect fintech with success
+            return redirect()->route('fintech')->with('success', 'Welcome to the Fintech Dashboard');
         }
 
         /**
