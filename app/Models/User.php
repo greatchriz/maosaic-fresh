@@ -129,4 +129,10 @@ class User extends Authenticatable
         return '$' .number_format($value, 2);
     }
 
+    // create a method that checks if a user has a card
+    public function hasCard()
+    {
+        return $this->cards()->exists();
+    }
+
 }

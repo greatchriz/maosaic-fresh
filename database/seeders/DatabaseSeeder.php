@@ -38,6 +38,8 @@ class DatabaseSeeder extends Seeder
             SectionSeeder::class,
             AdminmailSeeder::class,
             EmailContentSeeder::class,
+            CardSeeder::class,
+            PaymentMethodSeeder::class,
         ]);
     }
 }

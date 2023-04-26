@@ -19,7 +19,9 @@ use App\Http\Controllers\DepositController;
 use App\Http\Controllers\TransferController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\FrontEndController;
+use App\Http\Controllers\PaymentMethodController;
 use App\Models\Article;
+use App\Models\PaymentMethod;
 use Illuminate\Support\Arr;
 
 
@@ -97,14 +99,15 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::post('pay', [CardController::class, 'store'])->name('store-card');
 
     // deposit
-    Route::get('/deposit', function () {
-        // return view pages/finance/deposit with flash message
-        // return redirect('dashboard')->with('success', 'Deposit successful');
-        return view('pages/finance/deposit')->with('success', 'Deposit successful');
+    //goto deposit controller under create method
+    Route::get('/create/deposit', [PaymentMethodController::class, 'create'])->name('create-deposit');
 
-    })->name('deposit');
+    Route::get('payment/{paymentMethod}', [PaymentMethodController::class, 'select'])->name('select-payment-method');
 
-    Route::post('make-deposit', [DepositController::class, 'store'])->name('make-deposit');
+    Route::get('payment/create', [PaymentMethodController::class, 'pay'])->name('pay');
+
+
+
 
     // transfers
     Route::get('/transfer', [TransferController::class, 'create'])->name('transfer');
