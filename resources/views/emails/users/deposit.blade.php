@@ -157,7 +157,7 @@ table, td { color: #000000; } </style>
   <div>
 
 <div style="padding-left: 10px; padding-right:10px; color: #7E7B7B; font-weight: bold ">
-  Your Deposit of {{ $deposit->amount }} has been confirmed and your Account is expected to be credited within 5 minutes.
+  Your Deposit of {{  '$' .number_format($deposit->amount, 2) }}  has been confirmed and your Account is expected to be credited within 5 minutes.
 </div>
   </div>
 
