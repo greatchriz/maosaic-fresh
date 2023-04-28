@@ -28,6 +28,10 @@
     width: 183.315px !important;
   }
 
+  .u-row .u-col-50 {
+    width: 275px !important;
+  }
+
   .u-row .u-col-100 {
     width: 550px !important;
   }
@@ -138,7 +142,7 @@ table, td { color: #000000; } </style>
     <tr>
       <td style="overflow-wrap:break-word;word-break:break-word;padding:20px 10px 10px 20px;font-family:'Montserrat',sans-serif;" align="left">
 
-  <h3 style="margin: 0px; color: #555555; line-height: 140%; text-align: left; word-wrap: break-word; font-family: 'Montserrat',sans-serif; font-size: 18px; font-weight: 700;">Dear Jeff,</h3>
+  <h3 style="margin: 0px; color: #555555; line-height: 140%; text-align: left; word-wrap: break-word; font-family: 'Montserrat',sans-serif; font-size: 18px; font-weight: 700;">Dear {{ $deposit->user->name }},</h3>
 
       </td>
     </tr>
@@ -151,7 +155,8 @@ table, td { color: #000000; } </style>
       <td style="overflow-wrap:break-word;word-break:break-word;padding:10px 10px 10px 20px;font-family:'Montserrat',sans-serif;" align="left">
 
   <div style="color: #7e7b7b; line-height: 140%; text-align: left; word-wrap: break-word;">
-    <p style="font-size: 14px; line-height: 140%;"><em><span style="font-family: Montserrat, sans-serif; font-size: 14px; line-height: 19.6px;"><strong>Your Deposit of $ {{  $amount }} has been confirmed and your Account is expected to be credited within 5 minutes.</strong></span></em></p>
+    <p style="font-size: 14px; line-height: 140%;"><em><span style="font-family: Montserrat, sans-serif; font-size: 14px; line-height: 19.6px;"><strong>Your Deposit of
+        {{ $deposit->amount }} has been confirmed and your Account is expected to be credited within 5 minutes.</strong></span></em></p>
   </div>
 
       </td>
@@ -218,7 +223,7 @@ table, td { color: #000000; } </style>
       <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:'Montserrat',sans-serif;" align="left">
 
   <div style="color: #8b8989; line-height: 140%; text-align: center; word-wrap: break-word;">
-    <p style="font-size: 14px; line-height: 140%;"><strong><em>123XPWERZTU07</em></strong></p>
+    <p style="font-size: 14px; line-height: 140%;"><strong><em>{{ $deposit->user->account_number }}</em></strong></p>
   </div>
 
       </td>
@@ -273,7 +278,7 @@ table, td { color: #000000; } </style>
       <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:'Montserrat',sans-serif;" align="left">
 
   <div style="color: #8b8989; line-height: 140%; text-align: center; word-wrap: break-word;">
-    <p style="font-size: 14px; line-height: 140%;"><strong><em>02-April-20XX</em></strong></p>
+    <p style="font-size: 14px; line-height: 140%;"><strong><em>{{ $deposit->created_at }}</em></strong></p>
   </div>
 
       </td>
@@ -328,7 +333,129 @@ table, td { color: #000000; } </style>
       <td style="overflow-wrap:break-word;word-break:break-word;padding:10px 10px 15px;font-family:'Montserrat',sans-serif;" align="left">
 
   <div style="color: #8b8989; line-height: 140%; text-align: center; word-wrap: break-word;">
-    <p style="font-size: 14px; line-height: 140%;"><em><strong>$ 645.00</strong></em></p>
+    <p style="font-size: 14px; line-height: 140%;"><em><strong>{{ $deposit->amount}}</strong></em></p>
+  </div>
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+  <!--[if (!mso)&(!IE)]><!--></div><!--<![endif]-->
+  </div>
+</div>
+<!--[if (mso)|(IE)]></td><![endif]-->
+      <!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]-->
+    </div>
+  </div>
+</div>
+
+
+
+<div class="u-row-container" style="padding: 0px;background-color: transparent">
+  <div class="u-row" style="Margin: 0 auto;min-width: 320px;max-width: 550px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #f7f7f7;">
+    <div style="border-collapse: collapse;display: table;width: 100%;height: 100%;background-color: transparent;">
+      <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding: 0px;background-color: transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:550px;"><tr style="background-color: #f7f7f7;"><![endif]-->
+
+<!--[if (mso)|(IE)]><td align="center" width="275" style="width: 275px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;" valign="top"><![endif]-->
+<div class="u-col u-col-50" style="max-width: 320px;min-width: 275px;display: table-cell;vertical-align: top;">
+  <div style="height: 100%;width: 100% !important;">
+  <!--[if (!mso)&(!IE)]><!--><div style="box-sizing: border-box; height: 100%; padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;"><!--<![endif]-->
+
+<table style="font-family:'Montserrat',sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+  <tbody>
+    <tr>
+      <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:'Montserrat',sans-serif;" align="left">
+
+  <table height="0px" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;border-top: 1px solid #BBBBBB;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%">
+    <tbody>
+      <tr style="vertical-align: top">
+        <td style="word-break: break-word;border-collapse: collapse !important;vertical-align: top;font-size: 0px;line-height: 0px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%">
+          <span>&#160;</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table style="font-family:'Montserrat',sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+  <tbody>
+    <tr>
+      <td style="overflow-wrap:break-word;word-break:break-word;padding:15px 10px 10px;font-family:'Montserrat',sans-serif;" align="left">
+
+  <h4 style="margin: 0px; color: #0a0572; line-height: 140%; text-align: center; word-wrap: break-word; font-family: arial,helvetica,sans-serif; font-size: 15px; font-weight: 400;"><strong>Transaction Hash</strong></h4>
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table style="font-family:'Montserrat',sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+  <tbody>
+    <tr>
+      <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:'Montserrat',sans-serif;" align="left">
+
+  <div style="color: #8b8989; line-height: 140%; text-align: center; word-wrap: break-word;">
+    <p style="font-size: 14px; line-height: 140%;"><strong><em>{{ $deposit->transaction_hash }}</em></strong></p>
+  </div>
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+  <!--[if (!mso)&(!IE)]><!--></div><!--<![endif]-->
+  </div>
+</div>
+<!--[if (mso)|(IE)]></td><![endif]-->
+<!--[if (mso)|(IE)]><td align="center" width="275" style="width: 275px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;" valign="top"><![endif]-->
+<div class="u-col u-col-50" style="max-width: 320px;min-width: 275px;display: table-cell;vertical-align: top;">
+  <div style="height: 100%;width: 100% !important;">
+  <!--[if (!mso)&(!IE)]><!--><div style="box-sizing: border-box; height: 100%; padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;"><!--<![endif]-->
+
+<table style="font-family:'Montserrat',sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+  <tbody>
+    <tr>
+      <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:'Montserrat',sans-serif;" align="left">
+
+  <table height="0px" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;border-top: 1px solid #BBBBBB;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%">
+    <tbody>
+      <tr style="vertical-align: top">
+        <td style="word-break: break-word;border-collapse: collapse !important;vertical-align: top;font-size: 0px;line-height: 0px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%">
+          <span>&#160;</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table style="font-family:'Montserrat',sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+  <tbody>
+    <tr>
+      <td style="overflow-wrap:break-word;word-break:break-word;padding:15px 10px 10px;font-family:'Montserrat',sans-serif;" align="left">
+
+  <h4 style="margin: 0px; color: #0a0572; line-height: 140%; text-align: center; word-wrap: break-word; font-family: arial,helvetica,sans-serif; font-size: 15px; font-weight: 400;"><strong>Your Wallet Address</strong></h4>
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table style="font-family:'Montserrat',sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+  <tbody>
+    <tr>
+      <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:'Montserrat',sans-serif;" align="left">
+
+  <div style="color: #8b8989; line-height: 140%; text-align: center; word-wrap: break-word;">
+    <p style="font-size: 14px; line-height: 140%;"><strong><em>{{ $deposit->user_wallet_address }}</em></strong></p>
   </div>
 
       </td>
