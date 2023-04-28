@@ -86,6 +86,11 @@ Route::get('/protect-yourself', [FrontEndController::class, 'protectYourself'])-
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
+    // Route::get('/depositmail', function () {
+    //     $deposit = App\Models\Deposit::find(1);
+
+    //     return new App\Mail\DepositMail($deposit);
+    // });
 
 
 

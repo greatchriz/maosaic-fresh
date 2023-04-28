@@ -32,9 +32,9 @@ class EmailContentSeeder extends Seeder
             ],
 
             // [
-            //     'email_class' => 'TransferSuccessfull',
-            //     'title' => 'TRANSFER SUCCESSFULL.',
-            //     'paragraph1' => 'We have received your withdrawal request and we are processing it.',
+            //     'email_class' => 'DepositMail',
+            //     'title' => 'Your Deposit has been Confirmed.',
+            //     'paragraph1' => 'Your Deposit of $ {{  $amount }} has been confirmed and your Account is expected to be credited within 5 minutes.',
             //     'paragraph2' => 'You will receive a confirmation email once the withdrawal is.',
             //     'paragraph3' => 'Thank you for using our services.',
             //     'paragraph4' => '',

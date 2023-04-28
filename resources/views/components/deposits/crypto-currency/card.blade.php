@@ -52,16 +52,37 @@
             <label class="block text-sm font-medium mb-1" for="promo">Your Wallet Address</label>
         </div>
         <input id="promo" name="user_wallet_address" class="form-input w-full mb-2" type="text" />
+        {{-- display the error message here --}}
+
+        @error('user_wallet_address')
+            <div class="text-red-500 my-2 text-sm">
+                {{ $message }}
+            </div>
+        @enderror
 
         <div class="flex items-center justify-between">
             <label class="block text-sm font-medium mb-1" for="promo">Transaction Hash</label>
         </div>
         <input id="promo" name="transaction_hash" class="form-input w-full mb-2" type="text" />
 
+        {{-- display the error message here --}}
+        @error('transaction_hash')
+            <div class="text-red-500 my-2 text-sm">
+                {{ $message }}
+            </div>
+        @enderror
+
         <div class="flex items-center justify-between">
             <label class="block text-sm font-medium mb-1" for="promo">Amount</label>
         </div>
         <input id="promo" name="amount" class="form-input w-full mb-2" type="text" />
+
+        {{-- display the error message here --}}
+        @error('amount')
+            <div class="text-red-500 my-2 text-sm">
+                {{ $message }}
+            </div>
+        @enderror
 
     </div>
 

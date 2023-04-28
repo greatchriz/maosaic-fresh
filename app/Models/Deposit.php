@@ -36,4 +36,16 @@ class Deposit extends Model
     {
         return $this->morphMany(Transaction::class, 'transactionable');
     }
+
+    // create an accessor for the amount
+    public function getAmountAttribute($value)
+    {
+        return '$' .number_format($value, 2);
+    }
+
+    // create an accessor for the created_at
+    public function getCreatedAtAttribute($value)
+    {
+        return \Carbon\Carbon::parse($value)->diffForHumans();
+    }
 }

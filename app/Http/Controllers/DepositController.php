@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Models\Deposit;
 use Illuminate\Support\Facades\Validator;
 use App\Models\PaymentMethod;
+use App\Mail\DepositMail;
+use Illuminate\Support\Facades\Mail;
 
 class DepositController extends Controller
 {
@@ -30,11 +32,11 @@ class DepositController extends Controller
             'amount' => 'required|string|max:255',
         ]);
 
-        $request->user()->deposits()->create($validated);
+        $deposit = $request->user()->deposits()->create($validated);
+
+        Mail::to($request->user())->queue(new DepositMail($deposit));
 
         return back()->with('success', 'Deposit created successfully!');
-
-
     }
 
     public function createPayment(Deposit $deposit)
