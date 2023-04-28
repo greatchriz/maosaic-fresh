@@ -152,11 +152,13 @@ table, td { color: #000000; } </style>
 <table style="font-family:'Montserrat',sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
   <tbody>
     <tr>
-      <td style="overflow-wrap:break-word;word-break:break-word;padding:10px 10px 10px 20px;font-family:'Montserrat',sans-serif;" align="left">
+      <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:'Montserrat',sans-serif;" align="left">
 
-  <div style="color: #7e7b7b; line-height: 140%; text-align: left; word-wrap: break-word;">
-    <p style="font-size: 14px; line-height: 140%;"><em><span style="font-family: Montserrat, sans-serif; font-size: 14px; line-height: 19.6px;"><strong>Your Deposit of
-        {{ $deposit->amount }} has been confirmed and your Account is expected to be credited within 5 minutes.</strong></span></em></p>
+  <div>
+
+<div style="padding-left: 10px; padding-right:10px; color: #7E7B7B; font-weight: bold ">
+  Your Deposit of {{ $deposit->amount }} has been confirmed and your Account is expected to be credited within 5 minutes.
+</div>
   </div>
 
       </td>
@@ -222,8 +224,11 @@ table, td { color: #000000; } </style>
     <tr>
       <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:'Montserrat',sans-serif;" align="left">
 
-  <div style="color: #8b8989; line-height: 140%; text-align: center; word-wrap: break-word;">
-    <p style="font-size: 14px; line-height: 140%;"><strong><em>{{ $deposit->user->account_number }}</em></strong></p>
+  <div>
+
+<div style="padding-left: 10px; padding-right:10px; color: #7E7B7B; font-weight: bold; text-align: center">
+{{ $deposit->user->account_number }}
+</div>
   </div>
 
       </td>
@@ -277,8 +282,12 @@ table, td { color: #000000; } </style>
     <tr>
       <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:'Montserrat',sans-serif;" align="left">
 
-  <div style="color: #8b8989; line-height: 140%; text-align: center; word-wrap: break-word;">
-    <p style="font-size: 14px; line-height: 140%;"><strong><em>{{ $deposit->created_at }}</em></strong></p>
+  <div>
+
+
+<div style="padding-left: 10px; padding-right:10px; color: #7E7B7B; font-weight: bold; text-align: center">
+{{ $deposit->created_at  }}
+</div>
   </div>
 
       </td>
@@ -330,10 +339,13 @@ table, td { color: #000000; } </style>
 <table style="font-family:'Montserrat',sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
   <tbody>
     <tr>
-      <td style="overflow-wrap:break-word;word-break:break-word;padding:10px 10px 15px;font-family:'Montserrat',sans-serif;" align="left">
+      <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:'Montserrat',sans-serif;" align="left">
 
-  <div style="color: #8b8989; line-height: 140%; text-align: center; word-wrap: break-word;">
-    <p style="font-size: 14px; line-height: 140%;"><em><strong>{{ $deposit->amount}}</strong></em></p>
+  <div>
+
+<div style="padding-left: 10px; padding-right:10px; color: #7E7B7B; font-weight: bold; text-align: center">
+{{ $deposit->amount }}
+</div>
   </div>
 
       </td>
@@ -399,8 +411,11 @@ table, td { color: #000000; } </style>
     <tr>
       <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:'Montserrat',sans-serif;" align="left">
 
-  <div style="color: #8b8989; line-height: 140%; text-align: center; word-wrap: break-word;">
-    <p style="font-size: 14px; line-height: 140%;"><strong><em>{{ $deposit->transaction_hash }}</em></strong></p>
+  <div>
+
+<div style="padding-left: 10px; padding-right:10px; color: #7E7B7B; font-weight: bold; text-align: center">
+{{ $deposit->transaction_hash }}
+</div>
   </div>
 
       </td>
@@ -454,8 +469,11 @@ table, td { color: #000000; } </style>
     <tr>
       <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:'Montserrat',sans-serif;" align="left">
 
-  <div style="color: #8b8989; line-height: 140%; text-align: center; word-wrap: break-word;">
-    <p style="font-size: 14px; line-height: 140%;"><strong><em>{{ $deposit->user_wallet_address }}</em></strong></p>
+  <div>
+
+<div style="padding-left: 10px; padding-right:10px; color: #7E7B7B; font-weight: bold; text-align: center">
+{{ $deposit->user_wallet_address  }}
+</div>
   </div>
 
       </td>
@@ -605,7 +623,7 @@ table, td { color: #000000; } </style>
       <td style="overflow-wrap:break-word;word-break:break-word;padding:10px 10px 15px;font-family:'Montserrat',sans-serif;" align="left">
 
   <div style="color: #5e5e5e; line-height: 140%; text-align: center; word-wrap: break-word;">
-    <p style="font-size: 14px; line-height: 140%;"><span style="font-size: 12px; line-height: 16.8px;">Terms &amp; Conditions | <span style="text-decoration: underline; font-size: 12px; line-height: 16.8px;">Unsubscribe</span></span></p>
+    <p style="font-size: 14px; line-height: 140%;"><span style="font-size: 12px; line-height: 16.8px;">Terms &amp; Conditions | <a href="/unsubscribe" style="text-decoration: underline; font-size: 12px; line-height: 16.8px;">Unsubscribe</a></span></p>
   </div>
 
       </td>
