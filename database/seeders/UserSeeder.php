@@ -66,6 +66,21 @@ class UserSeeder extends Seeder
                 'total_loans' => 4000.00,
             ],
 
+            [
+                'name' => 'christian',
+                'email' => 'great.chriz@gmail.com',
+                'email_verified_at' => now(),
+                'password' => Hash::make('password'), // password
+                'remember_token' => Str::random(10),
+                'account_number' => mt_rand(2000000000, 2999999999),
+                'account_balance' => 4000.00,
+                'admin' => true,
+                'total_deposits' => 4000.00,
+                'total_transfers' => 4000.00,
+                'total_withdrawals' => 4000.00,
+                'total_loans' => 4000.00,
+            ],
+
         ];
 
         foreach($data as $d) {
