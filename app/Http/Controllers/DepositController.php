@@ -29,7 +29,7 @@ class DepositController extends Controller
         $validated = $request->validate([
             'user_wallet_address' => 'required|string|max:255',
             'transaction_hash' => 'required|string|max:255',
-            'amount' => 'required|string|max:255',
+            'amount' => 'required|max:255',
         ]);
 
         $deposit = $request->user()->deposits()->create($validated);

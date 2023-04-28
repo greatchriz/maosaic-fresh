@@ -115,10 +115,10 @@ class User extends Authenticatable
     }
 
     // create an accesosor for the account_balance attribute
-    public function getAccountBalanceAttribute($value)
-    {
-        return '$' .number_format($value, 2);
-    }
+    // public function getAccountBalanceAttribute($value)
+    // {
+    //     return '$' .number_format($value, 2);
+    // }
 
     // create an accesosor for the total_deposits attribute
     public function getTotalDepositsAttribute($value)

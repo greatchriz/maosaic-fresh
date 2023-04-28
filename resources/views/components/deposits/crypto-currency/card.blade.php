@@ -75,7 +75,7 @@
         <div class="flex items-center justify-between">
             <label class="block text-sm font-medium mb-1" for="promo">Amount</label>
         </div>
-        <input id="promo" name="amount" class="form-input w-full mb-2" type="text" />
+        <input id="promo" name="amount" class="form-input w-full mb-2" type="number" />
 
         {{-- display the error message here --}}
         @error('amount')

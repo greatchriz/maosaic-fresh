@@ -14,18 +14,10 @@ class DepositObserver
      */
     public function created(Deposit $deposit)
     {
-
-        // $deposit->user->increment('account_balance', $deposit->amount);
-
-        $deposit->createTransactions();
-
-        // $deposit->transactions->create([
-        //     'transaction_id' => '#12345678',
-        //     'status' => false,
-        // ]);
-
-        // $deposit->user->update(['account_balance' => $total_balance]);
-
+        // update the deposits user account balance with the amount deposited
+        $deposit->user->update([
+            'account_balance' => $deposit->user->account_balance + $deposit->amount
+        ]);
     }
 
     /**

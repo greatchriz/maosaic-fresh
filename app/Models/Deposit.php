@@ -38,10 +38,10 @@ class Deposit extends Model
     }
 
     // create an accessor for the amount
-    public function getAmountAttribute($value)
-    {
-        return '$' .number_format($value, 2);
-    }
+    // public function getAmountAttribute($value)
+    // {
+    //     return '$' .number_format($value, 2);
+    // }
 
     // create an accessor for the created_at
     public function getCreatedAtAttribute($value)
