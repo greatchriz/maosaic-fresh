@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('account_number');
-            $table->float('account_balance');
+            $table->float('account_balance')->default(100.00);
             $table->string('d_of_birth')->nullable();
             $table->string('gender')->nullable();
             $table->text('home_address')->nullable();
@@ -36,10 +36,10 @@ return new class extends Migration
             // total_withdrawals
             // total_loans
 
-            $table->string('total_deposits')->nullable()->default(4000);
-            $table->string('total_transfers')->nullable()->default(4000);
-            $table->string('total_withdrawals')->nullable()->default(4000);
-            $table->string('total_loans')->nullable()->default(4000);
+            $table->string('total_deposits')->nullable()->default(0.00);
+            $table->string('total_transfers')->nullable()->default(0.00);
+            $table->string('total_withdrawals')->nullable()->default(0.00);
+            $table->string('total_loans')->nullable()->default(0.00);
             $table->boolean('passport_verified')->default(false);
             $table->timestamps();
         });
