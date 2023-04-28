@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\User;
 
 class PaymentMethod extends Model
 {
@@ -24,5 +25,16 @@ class PaymentMethod extends Model
     //table
     protected $table = 'payment_methods';
 
+    //create a morph many realtionship
+    public function paymentable()
+    {
+        return $this->morphTo();
+    }
+
+    // a payment method belongs to a user
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 
 }

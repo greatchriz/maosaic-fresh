@@ -9,9 +9,9 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
-use App\Models\Card;
 use App\Models\Deposit;
 use App\Models\Transfer;
+use App\Models\PaymentMethod;
 
 class User extends Authenticatable
 {
@@ -78,10 +78,7 @@ class User extends Authenticatable
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function cards()
-    {
-        return $this->hasMany(Card::class);
-    }
+
 
     public function deposits()
     {
@@ -91,6 +88,24 @@ class User extends Authenticatable
     public function transfers()
     {
         return $this->hasMany(Transfer::class);
+    }
+
+   // a user has many payment methods
+    public function paymentMethods()
+    {
+        return $this->hasMany(PaymentMethod::class);
+    }
+
+    // get all the payments methods for the user where the paymentable_type is App\Models\Card
+    public function cards()
+    {
+        return $this->paymentMethods()->where('paymentable_type', 'App\Models\Card');
+    }
+
+    // create a method that checks if the user has a card
+    public function hasCard()
+    {
+        return $this->cards()->exists();
     }
 
     // create an accesosor for the created_at attribute
@@ -129,10 +144,6 @@ class User extends Authenticatable
         return '$' .number_format($value, 2);
     }
 
-    // create a method that checks if a user has a card
-    public function hasCard()
-    {
-        return $this->cards()->exists();
-    }
+
 
 }

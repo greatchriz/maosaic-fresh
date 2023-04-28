@@ -12,16 +12,31 @@
 
                 <!-- Input States -->
                 <div>
-                    <h2 class="text-2xl text-slate-800 font-bold mb-6">Select a Payment Method</h2>
 
                     <div class="grid grid-cols-12 gap-6 mb-3">
 
-                        @foreach ($payment_methods as $payment_method)
-                            <x-deposits.card :payment_method="$payment_method" />
-                        @endforeach
+                        {{-- <x-deposits.card :payment_method="$payment_method" /> --}}
 
                     </div>
 
+                    <form action="{{ route('deposit.store') }}" method="post">
+                        @csrf
+                        <div class="grid gap-5 md:grid-cols-3">
+
+                            <x-deposits.crypto-currency.card />
+
+
+
+
+                            <div class="m-1.5 text-right">
+                                <x-buttons.add-button>Add Funds</x-buttons.add-button>
+
+                            </div>
+
+
+                        </div>
+                    </form>
+                    {{-- @endif --}}
 
                 </div>
 

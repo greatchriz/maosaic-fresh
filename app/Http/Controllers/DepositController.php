@@ -16,16 +16,25 @@ class DepositController extends Controller
     {
         $payment_methods = PaymentMethod::all();
         return view('pages/deposits/create', [
-            'payment_methods' => $payment_methods,
         ]);
 
-        // $payment_method = $request->query('payment_method');
 
-        // if ($request->has('payment_method')) {
-        //     return redirect(route('create-deposit'))->with('payment-method', $payment_method);
-        // }
+    }
 
-        // return view('pages/deposits/create');
+    public function store(Request $request)
+    {
+
+        $validated = $request->validate([
+            'user_wallet_address' => 'required|string|max:255',
+            'transaction_hash' => 'required|string|max:255',
+            'amount' => 'required|string|max:255',
+        ]);
+
+        $request->user()->deposits()->create($validated);
+
+        return back()->with('success', 'Deposit created successfully!');
+
+
     }
 
     public function createPayment(Deposit $deposit)
@@ -51,20 +60,7 @@ class DepositController extends Controller
 
 
 
-    public function store(Request $request)
-    {
 
-        $validated = $request->validate([
-            'amount' => 'required|string|max:255',
-            'card_id' => 'required|string|max:255',
-        ]);
-
-        $request->user()->deposits()->create($validated);
-
-        return redirect(route('dashboard'));
-
-
-    }
 
 
     public function show(PaymentMethod $payment_method)

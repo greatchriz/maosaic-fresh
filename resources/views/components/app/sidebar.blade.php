@@ -50,7 +50,7 @@
                         <x-nav-link />
                     </x-nav-item >
 
-                    <x-nav-item link="create-deposit" title="Deposit">
+                    <x-nav-item link="deposit.create" title="Deposit">
                         <x-nav-link />
                     </x-nav-item >
                 </ul>

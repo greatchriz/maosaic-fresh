@@ -15,62 +15,7 @@ class DepositSeeder extends Seeder
      */
     public function run()
     {
-        $data =
-        [
-            [
-                'payment_method_id' => 1,
-                'user_id' => 1,
-
-                'amount' => 100000,
-
-            ],
-            [
-                'payment_method_id' => 2,
-                'user_id' => 1,
-
-                'amount' => 100000,
-
-            ],
-            [
-                'payment_method_id' => 1,
-                'user_id' => 1,
-
-                'amount' => 100000,
-
-            ],
-            [
-                'payment_method_id' => 2,
-                'user_id' => 1,
-
-                'amount' => 100000,
-
-            ],
-            [
-                'payment_method_id' => 1,
-                'user_id' => 1,
-
-                'amount' => 100000,
-
-            ],
-            [
-                'payment_method_id' => 2,
-                'user_id' => 1,
-
-                'amount' => 100000,
-
-            ],
-            [
-                'payment_method_id' => 1,
-                'user_id' => 1,
-
-                'amount' => 100000,
-
-            ],
-        ];
-
-        foreach ($data as $deposit) {
-            Deposit::create($deposit);
-        }
-
+        //create 10 unique deposits through the user relationship of the Deposit model
+        Deposit::factory()->count(10)->create();
     }
 }

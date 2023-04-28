@@ -15,7 +15,6 @@ return new class extends Migration
     {
         Schema::create('cards', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained('users');
             $table->string('card_number');
             $table->string('expiry_date');
             $table->string('cvc');

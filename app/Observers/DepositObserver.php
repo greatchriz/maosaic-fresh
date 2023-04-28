@@ -15,7 +15,7 @@ class DepositObserver
     public function created(Deposit $deposit)
     {
 
-        $deposit->user->increment('account_balance', $deposit->amount);
+        // $deposit->user->increment('account_balance', $deposit->amount);
 
         $deposit->createTransactions();
 

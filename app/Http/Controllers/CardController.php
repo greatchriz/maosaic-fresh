@@ -21,7 +21,7 @@ class CardController extends Controller
 
         $request->user()->cards()->create($validated);
 
-        return redirect(route('create-deposit'));
+        return redirect(route('deposit.create'));
 
 
     }

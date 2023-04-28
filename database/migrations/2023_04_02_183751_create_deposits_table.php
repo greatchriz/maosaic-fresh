@@ -15,8 +15,9 @@ return new class extends Migration
     {
         Schema::create('deposits', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('payment_method_id')->constrained('payment_methods');
             $table->foreignId('user_id')->constrained('users');
+            $table->string('user_wallet_address');
+            $table->string('transaction_hash');
             $table->float('amount');
             $table->timestamps();
         });

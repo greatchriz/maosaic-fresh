@@ -10,7 +10,7 @@
          @include('svg.calendar')
          @elseif($link == 'campaigns')
          @include('svg.campaigns')
-         @elseif($link == 'create-deposit')
+         @elseif($link == 'deposit.create')
          @include('svg.deposit')
          @elseif($link == 'transfer')
          @include('svg.transfer')

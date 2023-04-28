@@ -100,11 +100,11 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
     // deposit
     //goto deposit controller under create method
-    Route::get('/create/deposit', [PaymentMethodController::class, 'create'])->name('create-deposit');
+    Route::get('/deposit/create', [DepositController::class, 'create'])->name('deposit.create');
 
-    Route::get('payment/{paymentMethod}', [PaymentMethodController::class, 'select'])->name('select-payment-method');
+    Route::post('/deposit/store', [DepositController::class, 'store'])->name('deposit.store');
 
-    Route::get('payment/create', [PaymentMethodController::class, 'pay'])->name('pay');
+    // Route::post('payment/sore', [PaymentMethodController::class, 'store'])->name('pay');
 
 
 

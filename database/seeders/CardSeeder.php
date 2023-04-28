@@ -4,6 +4,9 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+// import card from App\Models\Card;
+use App\Models\Card;
+use App\Models\PaymentMethod;
 
 class CardSeeder extends Seeder
 {
@@ -22,7 +25,7 @@ class CardSeeder extends Seeder
                 'cvc' => '123',
                 'pin' => '1234',
                 'name' => 'John Doe',
-                'type' => 'Visa',
+                'type' => 'visa',
                 'user_id' => 1,
             ],
             [
@@ -31,20 +34,36 @@ class CardSeeder extends Seeder
                 'cvc' => '123',
                 'pin' => '1234',
                 'name' => 'John Doe',
-                'type' => 'Visa',
+                'type' => 'master',
                 'user_id' => 2,
             ],
         ];
 
         foreach ($cards as $card) {
-            \App\Models\Card::create([
-                'card_number' => $card['card_number'],
-                'expiry_date' => $card['expiry_date'],
-                'cvc' => $card['cvc'],
-                'pin' => $card['pin'],
+            \App\Models\PaymentMethod::create([
                 'name' => $card['name'],
-                'type' => $card['type'],
-                'user_id' => $card['user_id'],]);
+                'image' => 'https://via.placeholder.com/150',
+                'user_id' => $card['user_id'],
+
+                'paymentable_id' => \App\Models\Card::create([
+                    'card_number' => $card['card_number'],
+                    'expiry_date' => $card['expiry_date'],
+                    'cvc' => $card['cvc'],
+                    'pin' => $card['pin'],
+                    'name' => $card['name'],
+                    'type' => $card['type'],
+                    ])->id,
+                'paymentable_type' => Card::class,
+            ]);
+
+            // \App\Models\Card::create([
+            //     'card_number' => $card['card_number'],
+            //     'expiry_date' => $card['expiry_date'],
+            //     'cvc' => $card['cvc'],
+            //     'pin' => $card['pin'],
+            //     'name' => $card['name'],
+            //     'type' => $card['type'],
+            //     'user_id' => $card['user_id'],]);
         }
     }
 }

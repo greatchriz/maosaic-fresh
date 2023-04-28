@@ -13,16 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('payment_methods', function (Blueprint $table) {
+        Schema::create('crypto_wallets', function (Blueprint $table) {
             $table->id();
-
-            $table->foreignId('user_id')->constrained('users');
-            // $table->foreignId('crypto_wallet_id')->constrained('crypto_wallets')->nullable();
-            $table->string('name');
-            $table->string('image');
-            //create a polymorphic realtionship column
-            $table->morphs('paymentable');
-
+            $table->string('wallet_address')->unique();
             $table->timestamps();
         });
     }
@@ -34,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('payment_methods');
+        Schema::dropIfExists('crypto_wallets');
     }
 };

@@ -11,17 +11,19 @@ class PaymentMethodController extends Controller
 {
     public function create ()
     {
-
-        $payment_methods = PaymentMethod::all();
-        return view('pages/deposits/create', [
-            'payment_methods' => $payment_methods,
-        ]);
+        // return all the payment methods where the
+        return view('pages/deposits/create');
 
     }
 
-    public function select (PaymentMethod $paymentMethod)
+    public function select (Request $request)
     {
-        $payment_method = $paymentMethod;
+        // get the url parameter (payment_method)
+        $payment_method = $request->payment_method;
+
+        // $payment_method = $request->payment_method;
+
+        // $payment_method = $paymentMethod;
 
         return view('pages/deposits/payment', [
             'payment_method' => $payment_method,
@@ -30,12 +32,10 @@ class PaymentMethodController extends Controller
 
     }
 
+
     public function store (Request $request, PaymentMethod $paymentMethod)
     {
-        $paymentMethod->name = $request->name;
-        $paymentMethod->image = $request->image;
-        $paymentMethod->save();
 
-        return redirect()->route('paymentMethod.create');
+        dd($paymentMethod);
     }
 }

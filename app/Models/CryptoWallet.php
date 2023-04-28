@@ -5,11 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Card extends Model
+class CryptoWallet extends Model
 {
     use HasFactory;
 
-    protected $guarded = [];
+    protected $fillable = [
+        'user_id',
+        'wallet_address',
+    ];
 
     public function user()
     {
@@ -17,10 +20,10 @@ class Card extends Model
     }
 
     // create a morph many relationship
+
     public function paymentMethod()
     {
         return $this->morphMany(PaymentMethod::class, 'paymentable');
     }
-
 
 }
