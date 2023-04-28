@@ -43,12 +43,7 @@ class UserSeeder extends Seeder
                 'remember_token' => Str::random(10),
                 'account_number' => mt_rand(2000000000, 2999999999),
                 // float for account balance
-                'account_balance' => 4000.00,
                 'admin' => false,
-                'total_deposits' => '4000',
-                'total_transfers' => '4000',
-                'total_withdrawals' => '4000',
-                'total_loans' => '4000',
             ],
 
             [
@@ -58,12 +53,7 @@ class UserSeeder extends Seeder
                 'password' => Hash::make('password'), // password
                 'remember_token' => Str::random(10),
                 'account_number' => mt_rand(2000000000, 2999999999),
-                'account_balance' => 4000.00,
                 'admin' => true,
-                'total_deposits' => 4000.00,
-                'total_transfers' => 4000.00,
-                'total_withdrawals' => 4000.00,
-                'total_loans' => 4000.00,
             ],
 
             [
@@ -73,12 +63,27 @@ class UserSeeder extends Seeder
                 'password' => Hash::make('password'), // password
                 'remember_token' => Str::random(10),
                 'account_number' => mt_rand(2000000000, 2999999999),
-                'account_balance' => 4000.00,
                 'admin' => true,
-                'total_deposits' => 4000.00,
-                'total_transfers' => 4000.00,
-                'total_withdrawals' => 4000.00,
-                'total_loans' => 4000.00,
+            ],
+
+            [
+                'name' => 'inaya',
+                'email' => 'anayamustafa030@gmail.com',
+                'email_verified_at' => now(),
+                'password' => Hash::make('password'), // password
+                'remember_token' => Str::random(10),
+                'account_number' => mt_rand(2000000000, 2999999999),
+                'admin' => true,
+            ],
+
+            [
+                'name' => 'unlayer',
+                'email' => 'unlayeremail4now@gmail.com',
+                'email_verified_at' => now(),
+                'password' => Hash::make('password'), // password
+                'remember_token' => Str::random(10),
+                'account_number' => mt_rand(2000000000, 2999999999),
+                'admin' => true,
             ],
 
         ];
@@ -91,23 +96,9 @@ class UserSeeder extends Seeder
                 'password' => $d['password'],
                 'remember_token' => $d['remember_token'],
                 'account_number' => $d['account_number'],
-                'account_balance' => $d['account_balance'],
                 'admin' => $d['admin'],
-                'total_deposits' => $d['total_deposits'],
-                'total_transfers' => $d['total_transfers'],
-                'total_withdrawals' => $d['total_withdrawals'],
-                'total_loans' => $d['total_loans'],
             ]);
         }
-
-        // DB::table('users')->insert([
-        //     'name' => 'test',
-        //     'email' => 'test@gmail.com',
-        //     'email_verified_at' => now(),
-        //     'password' => Hash::make('password'), // password
-        //     'remember_token' => Str::random(10),
-        //     'account_number' => Str::random(10),
-        // ]);
 
     }
 }
