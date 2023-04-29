@@ -186,21 +186,8 @@
     <!-- script js -->
     <script src="js/script.js"></script>
 
-    <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
-        var Tawk_API = Tawk_API || {},
-            Tawk_LoadStart = new Date();
-        (function() {
-            var s1 = document.createElement("script"),
-                s0 = document.getElementsByTagName("script")[0];
-            s1.async = true;
-            s1.src = 'https://embed.tawk.to/643f992431ebfa0fe7f92c50/1guc6sejh';
-            s1.charset = 'UTF-8';
-            s1.setAttribute('crossorigin', '*');
-            s0.parentNode.insertBefore(s1, s0);
-        })();
-    </script>
-    <!--End of Tawk.to Script-->
+   <script src="//code.tidio.co/febkkdxyeznjhe4gj4dob3aen0afxgls.js"></script>
+
 
 </body>
 
