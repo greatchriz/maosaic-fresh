@@ -97,7 +97,6 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     // Route for the getting the data feed
     Route::get('/json-data-feed', [DataFeedController::class, 'getDataFeed'])->name('json_data_feed');
 
-    // cards
     Route::get('/ecommerce/pay', function () {
         return view('pages/ecommerce/pay');
     })->name('pay');
@@ -133,6 +132,21 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
     Route::get('/deposits', [DepositController::class, 'index'])->name('admin-deposits');
     Route::get('/admin/transfers', [UserController::class, 'index'])->name('admin-transfers');
+
+    //card routes
+        // create route for showing all cards
+        Route::get('/cards', [CardController::class, 'index'])->name('cards.index');
+
+        // create routes for creating a new card
+        Route::get('/cards/create', [CardController::class, 'create'])->name('cards.create');
+
+        // create routes for Storing a card
+        Route::post('/cards/store', [CardController::class, 'store'])->name('cards.store');
+
+        // create route for showing a card
+        Route::get('/cards/{card}', [CardController::class, 'show'])->name('cards.show');
+
+
 
 
 

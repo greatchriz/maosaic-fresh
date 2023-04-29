@@ -38,7 +38,7 @@ class DatabaseSeeder extends Seeder
             SectionSeeder::class,
             AdminmailSeeder::class,
             EmailContentSeeder::class,
-            CardSeeder::class,
+            // CardSeeder::class,
             // PaymentMethodSeeder::class,
             CryptoWalletSeeder::class,
             DepositSeeder::class,

@@ -8,19 +8,27 @@ use Illuminate\Database\Eloquent\Model;
 class Card extends Model
 {
     use HasFactory;
+    //create fillable properties for all the columns in the cards table
+    protected $fillable = [
+        'user_id',
+        'card_number',
+        'expiry_date',
+        'cvc',
+        'pin',
+        'name',
+        'type',
+        'address',
+        'phone_number',
+        'active',
+    ];
 
-    protected $guarded = [];
 
     public function user()
     {
         return $this->belongsTo(User::class);
     }
 
-    // create a morph many relationship
-    public function paymentMethod()
-    {
-        return $this->morphMany(PaymentMethod::class, 'paymentable');
-    }
 
 
 }
+

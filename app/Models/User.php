@@ -11,7 +11,8 @@ use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
 use App\Models\Deposit;
 use App\Models\Transfer;
-use App\Models\PaymentMethod;
+use App\Models\Card;
+
 
 class User extends Authenticatable
 {
@@ -73,11 +74,6 @@ class User extends Authenticatable
         'profile_photo_url',
     ];
 
-    /**
-     * Get all of the cards for the User
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
 
 
     public function deposits()
@@ -90,16 +86,11 @@ class User extends Authenticatable
         return $this->hasMany(Transfer::class);
     }
 
-   // a user has many payment methods
-    public function paymentMethods()
-    {
-        return $this->hasMany(PaymentMethod::class);
-    }
 
-    // get all the payments methods for the user where the paymentable_type is App\Models\Card
+    // create a user has many cards relationship
     public function cards()
     {
-        return $this->paymentMethods()->where('paymentable_type', 'App\Models\Card');
+        return $this->hasMany(Card::class);
     }
 
     // create a method that checks if the user has a card
@@ -143,6 +134,7 @@ class User extends Authenticatable
     {
         return '$' .number_format($value, 2);
     }
+
 
 
 
