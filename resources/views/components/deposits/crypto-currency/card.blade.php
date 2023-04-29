@@ -2,7 +2,7 @@
     <div class="text-xl font-semibold">TRC 20 Wallet</div>
     <div class="flex items-center justify-between mb-4 max-w-sm">
 
-        <div class="text-sm text-slate-800">qwertyuiopolkjhgfdsazxcvbnmmkjhgfdsawwe</div>
+        <div class="text-sm text-slate-800">TUWKyCf9uFvs2dAJF8L7UkD3w5u6SVrwdy</div>
 
         <svg fill="#000000" height="40px" width="40px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64" enable-background="new 0 0 64 64"
