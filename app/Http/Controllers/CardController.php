@@ -62,4 +62,23 @@ class CardController extends Controller
         ]);
     }
 
+    // create a method that will handle deposit_proof image validation, upload and store the path in the cards deposit_proof column
+    public function uploadProof (Request $request, Card $card)
+    {
+        $request->validate([
+            'deposit_proof' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:12288',
+        ]);
+
+        $imageName = time() . '.' . $request->deposit_proof->extension();
+
+        $request->deposit_proof->move(public_path('images/deposit_proof'), $imageName);
+
+        $card->deposit_proof = $imageName;
+
+        $card->save();
+
+        return redirect()->route('cards.show', $card->id);
+    }
+
+
 }

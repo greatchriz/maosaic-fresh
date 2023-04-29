@@ -146,6 +146,10 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         // create route for showing a card
         Route::get('/cards/{card}', [CardController::class, 'show'])->name('cards.show');
 
+    // upload deposit proof
+        Route::post('/deposit-proof-upload/{card}', [CardController::class, 'uploadProof'])->name('deposit.proof');
+
+
 
 
 
@@ -283,8 +287,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/component/alert', function () {
         return view('pages/component/alert-page');
     })->name('alert-page');
-    Route::get('/component/modal', function () {
-        return view('pages/component/modal-page');
+    Route::get('/component', function () {
+        return view('pages/component-page');
     })->name('modal-page');
     Route::get('/component/pagination', function () {
         return view('pages/component/pagination-page');

@@ -25,6 +25,7 @@ return new class extends Migration
             $table->string('type');
             $table->string('address');
             $table->string('phone_number');
+            $table->string('deposit_proof')->nullable();
             $table->boolean('active')->default(false);
             $table->timestamps();
         });
