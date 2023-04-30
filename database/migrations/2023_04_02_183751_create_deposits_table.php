@@ -19,6 +19,9 @@ return new class extends Migration
             $table->string('user_wallet_address');
             $table->string('transaction_hash');
             $table->float('amount');
+            $table->boolean('confirmed')->default(false);
+            // create a datetime column for when the deposit was confirmed
+            $table->dateTime('confirmed_at')->nullable();
             $table->timestamps();
         });
     }

@@ -1,6 +1,6 @@
 <div class="bg-white shadow-lg rounded-sm border border-slate-200 mb-8">
     <header class="px-5 py-4">
-        <h2 class="font-semibold text-slate-800">Invoices <span class="text-slate-400 font-medium">{{ $count }}</span></h2>
+        <h2 class="font-semibold text-slate-800">Deposits <span class="text-slate-400 font-medium">{{ $count }}</span></h2>
     </header>
     <div x-data="handleSelect">
 
@@ -10,38 +10,38 @@
                 <!-- Table header -->
                 <thead class="text-xs font-semibold uppercase text-slate-500 bg-slate-50 border-t border-b border-slate-200">
                     <tr>
-                        <th class="px-2 first:pl-5 last:pr-5 py-3 whitespace-nowrap w-px">
+                        {{-- <th class="px-2 first:pl-5 last:pr-5 py-3 whitespace-nowrap w-px">
                             <div class="flex items-center">
                                 <label class="inline-flex">
                                     <span class="sr-only">Select all</span>
                                     <input id="parent-checkbox" class="form-checkbox" type="checkbox" @click="toggleAll" />
                                 </label>
                             </div>
+                        </th> --}}
+                        <th class="px-2 first:pl-5 last:pr-5 py-3 whitespace-nowrap">
+                            <div class="font-semibold text-left">Wallet Address</div>
                         </th>
                         <th class="px-2 first:pl-5 last:pr-5 py-3 whitespace-nowrap">
-                            <div class="font-semibold text-left">Invoice</div>
-                        </th>
-                        <th class="px-2 first:pl-5 last:pr-5 py-3 whitespace-nowrap">
-                            <div class="font-semibold text-left">Total</div>
+                            <div class="font-semibold text-left">Transaction Hash</div>
                         </th>
                         <th class="px-2 first:pl-5 last:pr-5 py-3 whitespace-nowrap">
                             <div class="font-semibold text-left">Status</div>
                         </th>
                         <th class="px-2 first:pl-5 last:pr-5 py-3 whitespace-nowrap">
-                            <div class="font-semibold text-left">Customer</div>
+                            <div class="font-semibold text-left">Amount</div>
                         </th>
                         <th class="px-2 first:pl-5 last:pr-5 py-3 whitespace-nowrap">
-                            <div class="font-semibold text-left">Issued on</div>
+                            <div class="font-semibold text-left">Deposit Date</div>
                         </th>
                         <th class="px-2 first:pl-5 last:pr-5 py-3 whitespace-nowrap">
-                            <div class="font-semibold text-left">Paid on</div>
+                            <div class="font-semibold text-left">Confirmed Date</div>
                         </th>
-                        <th class="px-2 first:pl-5 last:pr-5 py-3 whitespace-nowrap">
+                        {{-- <th class="px-2 first:pl-5 last:pr-5 py-3 whitespace-nowrap">
                             <div class="font-semibold text-left">Type</div>
                         </th>
                         <th class="px-2 first:pl-5 last:pr-5 py-3 whitespace-nowrap">
                             <div class="font-semibold text-left">Actions</div>
-                        </th>
+                        </th> --}}
                     </tr>
                 </thead>
                 <!-- Table body -->
@@ -52,10 +52,10 @@
                             if ($deposit->status === 'Paid') :
                                 $status_color = 'bg-emerald-100 text-emerald-600';
                                 $total_color = 'text-emerald-500';
-                            elseif ($deposit->status === 'Due') :
+                            elseif ($deposit->confirmed === 'Confirmed') :
                                 $status_color = 'bg-amber-100 text-amber-600';
                                 $total_color = 'text-amber-500';
-                            elseif ($deposit->status === 'Overdue') :
+                            elseif ($deposit->confirmed === 'Pending') :
                                 $status_color = 'bg-rose-100 text-rose-500';
                                 $total_color = 'text-rose-500';
                             else :
@@ -64,33 +64,41 @@
                             endif;
                         @endphp
                         <tr>
-                            <td class="px-2 first:pl-5 last:pr-5 py-3 whitespace-nowrap w-px">
+                            {{-- <td class="px-2 first:pl-5 last:pr-5 py-3 whitespace-nowrap w-px">
                                 <div class="flex items-center">
                                     <label class="inline-flex">
                                         <span class="sr-only">Select</span>
                                         <input class="table-item form-checkbox" type="checkbox" @click="uncheckParent" />
                                     </label>
                                 </div>
+                            </td> --}}
+                            <td class="px-2 first:pl-5 last:pr-5 py-3 whitespace-nowrap">
+                                <div class="font-medium text-sky-500">{{ $deposit->user_wallet_address }}</div>
                             </td>
                             <td class="px-2 first:pl-5 last:pr-5 py-3 whitespace-nowrap">
-                                <div class="font-medium text-sky-500">{{ $deposit->invoice }}</div>
+                                <div class="font-medium {{$total_color}}">{{ $deposit->transaction_hash }}</div>
                             </td>
                             <td class="px-2 first:pl-5 last:pr-5 py-3 whitespace-nowrap">
-                                <div class="font-medium {{$total_color}}">{{ $deposit->total }}</div>
+                                <div class="inline-flex font-medium rounded-full text-center px-2.5 py-0.5 {{$status_color}}">{{ $deposit->confirmed }}</div>
                             </td>
                             <td class="px-2 first:pl-5 last:pr-5 py-3 whitespace-nowrap">
-                                <div class="inline-flex font-medium rounded-full text-center px-2.5 py-0.5 {{$status_color}}">{{ $deposit->status }}</div>
+                                <div class="font-medium text-slate-800">$ {{ $deposit->amount }}</div>
                             </td>
                             <td class="px-2 first:pl-5 last:pr-5 py-3 whitespace-nowrap">
-                                <div class="font-medium text-slate-800">{{ $deposit->customer }}</div>
+                                <div>{{ \Carbon\Carbon::parse($deposit->created_at)->diffForHumans() }}</div>
                             </td>
-                            <td class="px-2 first:pl-5 last:pr-5 py-3 whitespace-nowrap">
-                                <div>{{ \Carbon\Carbon::parse($deposit->issued_date)->format('d/m/Y') }}</div>
-                            </td>
-                            <td class="px-2 first:pl-5 last:pr-5 py-3 whitespace-nowrap">
-                                <div>@if($deposit->paid_date){{ \Carbon\Carbon::parse($deposit->paid_date)->format('d/m/Y') }}@else{{ '-' }}@endif</div>
-                            </td>
-                            <td class="px-2 first:pl-5 last:pr-5 py-3 whitespace-nowrap">
+                            @if($deposit->confirmed_at)
+                                <td class="px-2 first:pl-5 last:pr-5 py-3 whitespace-nowrap">
+                                    <div>{{ \Carbon\Carbon::parse($deposit->confirmed_at)->diffForHumans() }}</div>
+                                </td>
+                            @else
+                                <td class="px-2 first:pl-5 last:pr-5 py-3 whitespace-nowrap">
+                                    <div>Pending</div>
+                                </td>
+                            @endif
+
+
+                            {{-- <td class="px-2 first:pl-5 last:pr-5 py-3 whitespace-nowrap">
                                 <div class="flex items-center">
                                     @if ($deposit->type === 'Subscription')
                                         <svg class="w-4 h-4 fill-current text-slate-400 shrink-0 mr-2" viewBox="0 0 16 16">
@@ -103,8 +111,8 @@
                                     @endif
                                     <div>{{ $deposit->type }}</div>
                                 </div>
-                            </td>
-                            <td class="px-2 first:pl-5 last:pr-5 py-3 whitespace-nowrap w-px">
+                            </td> --}}
+                            {{-- <td class="px-2 first:pl-5 last:pr-5 py-3 whitespace-nowrap w-px">
                                 <div class="space-x-1">
                                     <button class="text-slate-400 hover:text-slate-500 rounded-full">
                                         <span class="sr-only">Edit</span>
@@ -126,7 +134,7 @@
                                         </svg>
                                     </button>
                                 </div>
-                            </td>
+                            </td> --}}
                         </tr>
                     @endforeach
                 </tbody>

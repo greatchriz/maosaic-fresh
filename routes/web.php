@@ -108,7 +108,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
     Route::post('/deposit/store', [DepositController::class, 'store'])->name('deposit.store');
 
-    // Route::post('payment/sore', [PaymentMethodController::class, 'store'])->name('pay');
+    // create a route that shows all deposits for a user
+    Route::get('/deposit', [DepositController::class, 'index'])->name('deposit.index');
 
 
 

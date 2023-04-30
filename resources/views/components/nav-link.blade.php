@@ -16,6 +16,8 @@
          @include('svg.transfer')
          @elseif($link == 'community')
          @include('svg.community')
+         @elseif($link == 'deposit.index')
+         @include('svg.community')
          @elseif($link == 'cards.create')
             @include('svg.community')
          @endif

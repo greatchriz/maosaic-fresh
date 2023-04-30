@@ -54,9 +54,15 @@
                         <x-nav-link />
                     </x-nav-item >
 
+                    <x-nav-item link="deposit.index" title="Deposit History">
+                        <x-nav-link />
+                    </x-nav-item >
+
                     <x-nav-item link="cards.create" title="Request Card">
                         <x-nav-link />
                     </x-nav-item >
+
+
                 </ul>
 
             </div>

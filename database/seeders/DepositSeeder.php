@@ -15,7 +15,13 @@ class DepositSeeder extends Seeder
      */
     public function run()
     {
+        $users = \App\Models\User::all(); //get all users
         //create 10 unique deposits through the user relationship of the Deposit model
-        Deposit::factory()->count(10)->create();
+        $users->each(function ($user) {
+            Deposit::factory()->count(50)->create([
+                'user_id' => $user->id,
+            ]);
+        });
+
     }
 }

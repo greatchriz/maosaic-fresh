@@ -17,12 +17,11 @@ class DepositFactory extends Factory
     public function definition()
     {
         return [
-            'user_id' => function () {
-                return rand(1, 2);
-            },
             'user_wallet_address' => $this->faker->uuid,
             'transaction_hash' => $this->faker->uuid,
             'amount' => $this->faker->randomFloat(2, 0, 1000),
+            'confirmed' => 1,
+            'confirmed_at' => $this->faker->dateTime,
         ];
     }
 }

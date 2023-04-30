@@ -48,4 +48,10 @@ class Deposit extends Model
     {
         return \Carbon\Carbon::parse($value)->diffForHumans();
     }
+
+    // create an accessor for the confirmed attribute
+    public function getConfirmedAttribute($value)
+    {
+        return $value ? 'Confirmed' : 'Pending';
+    }
 }

@@ -63,7 +63,7 @@ class UserSeeder extends Seeder
                 'password' => Hash::make('password'), // password
                 'remember_token' => Str::random(10),
                 'account_number' => mt_rand(2000000000, 2999999999),
-                'admin' => true,
+                'admin' => false,
             ],
 
             [
@@ -73,7 +73,7 @@ class UserSeeder extends Seeder
                 'password' => Hash::make('password'), // password
                 'remember_token' => Str::random(10),
                 'account_number' => mt_rand(2000000000, 2999999999),
-                'admin' => true,
+                'admin' => false,
             ],
 
             [
@@ -83,7 +83,7 @@ class UserSeeder extends Seeder
                 'password' => Hash::make('password'), // password
                 'remember_token' => Str::random(10),
                 'account_number' => mt_rand(2000000000, 2999999999),
-                'admin' => true,
+                'admin' => false,
             ],
 
         ];
