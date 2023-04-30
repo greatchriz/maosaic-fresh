@@ -19,7 +19,7 @@
         public function index()
         {
             //return redirect fintech with success
-            return redirect()->route('fintech')->with('success', 'Welcome to the Fintech Dashboard');
+            return redirect()->route('fintech')->with('success', 'Welcome to your Crownagent Dashboard');
         }
 
         /**

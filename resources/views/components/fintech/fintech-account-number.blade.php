@@ -23,8 +23,11 @@
                 {{-- check if content is available show the following div if not dont --}}
 
 
-
-                <div class="flex justify-center items-center mb-3"> <span class="text-green-500">{{ $content }}</span></div>
+                @if($content == $loggedUser->account_balance)
+                    <div class="flex justify-center items-center mb-3"> <span class="text-green-500">{{ '$' .number_format($content, 2) }}</span></div>
+                @else
+                    <div class="flex justify-center items-center mb-3"> <span class="text-green-500">{{ $content }}</span></div>
+                @endif
 
 
             </header>
