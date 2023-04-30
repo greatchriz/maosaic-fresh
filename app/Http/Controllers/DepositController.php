@@ -20,14 +20,14 @@ class DepositController extends Controller
 
         if ($user->admin) {
             $deposits = Deposit::paginate(10);
-            $all_deposits_count = Deposit::all()->count();
+            $deposits_count = Deposit::all()->count();
             // get the count of all the deposits where the confirmed column is false
             $pending_deposits_count = Deposit::where('confirmed', false)->count();
             // get the count of all the deposits where the confirmed column is true
             $confirmed_deposits_count = Deposit::where('confirmed', true)->count();
             return view('pages/deposits/index', [
                 'deposits' => $deposits,
-                'all_deposits_count' => $all_deposits_count,
+                'deposits_count' => $deposits_count,
                 'pending_deposits_count' => $pending_deposits_count,
                 'confirmed_deposits_count' => $confirmed_deposits_count,
             ]);
