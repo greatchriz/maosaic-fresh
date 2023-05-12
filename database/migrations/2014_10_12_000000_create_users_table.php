@@ -31,11 +31,6 @@ return new class extends Migration
             $table->string('profile_photo_path', 2048)->nullable();
             $table->string('passport_image_1', 2048)->nullable();
             $table->string('passport_image_2', 2048)->nullable();
-            // total_deposits
-            // total_transfers
-            // total_withdrawals
-            // total_loans
-
             $table->string('total_deposits')->nullable()->default(0.00);
             $table->string('total_transfers')->nullable()->default(0.00);
             $table->string('total_withdrawals')->nullable()->default(0.00);
