@@ -6,7 +6,12 @@
             <div class="flex items-center mb-4 md:mb-0">
                 <!-- Avatar -->
                 <div class="mr-4">
-                    <img class="inline-flex rounded-full" src="{{ asset('images/user-64-02.jpg') }}" width="64" height="64" alt="User" />
+                @if(!empty($user->profile_photo_url))
+                    <img class="inline-flex rounded-full" src="{{ $loggedUser->profile_photo_url }}" width="64" height="64" alt="User" />
+
+                @else
+                <img class="inline-flex rounded-full" src="{{ asset('images/person.jpg') }}" width="64" height="64" alt="User" />
+                @endif
                 </div>
                 <!-- User info -->
                 <div class="">
