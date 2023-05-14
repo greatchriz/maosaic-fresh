@@ -6,7 +6,7 @@
             <div class="flex items-center mb-4 md:mb-0">
                 <!-- Avatar -->
                 <div class="mr-4">
-                @if(!empty($user->profile_photo_url))
+                @if(!empty($loggedUser->profile_photo_url))
                     <img class="inline-flex rounded-full" src="{{ $loggedUser->profile_photo_url }}" width="64" height="64" alt="User" />
 
                 @else
