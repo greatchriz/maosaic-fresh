@@ -7,11 +7,11 @@
                 <!-- Avatar -->
                 <div class="mr-4">
                 @if(!empty($loggedUser->profile_photo_url))
-
-                    <img class="inline-flex rounded-full" src="{{ $loggedUser->profile_photo_url }}" width="64" height="64" alt="User" />
+                <img class="w-8 h-8 rounded-full" src="{{ Auth::user()->profile_photo_url }}" width="64" height="64"
+                alt="{{ Auth::user()->name }}" />
 
                 @else
-                <img class="inline-flex rounded-full" src="{{ asset('images/person.jpg') }}" width="64" height="64" alt="User" />
+                <img class="w-8 h-8 rounded-full"  src="{{ asset('images/person.jpg') }}" width="64" height="64" alt="User" />
                 @endif
                 </div>
                 <!-- User info -->
