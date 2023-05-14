@@ -7,6 +7,7 @@
                 <!-- Avatar -->
                 <div class="mr-4">
                 @if(!empty($loggedUser->profile_photo_url))
+
                     <img class="inline-flex rounded-full" src="{{ $loggedUser->profile_photo_url }}" width="64" height="64" alt="User" />
 
                 @else
