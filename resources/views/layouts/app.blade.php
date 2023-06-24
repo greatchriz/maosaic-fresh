@@ -14,8 +14,15 @@
     <!-- Styles -->
     @livewireStyles
 
-    <!-- Scripts -->
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+        <!-- Scripts -->
+        {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
+
+        {{-- replicate the code above with mix instead of vite --}}
+
+        <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+        <script src="{{ mix('js/app.js') }}" defer></script>
+
+
 </head>
 
 <body class="font-inter antialiased bg-slate-100 text-slate-600" :class="{ 'sidebar-expanded': sidebarExpanded }"
