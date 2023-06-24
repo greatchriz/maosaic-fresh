@@ -14,11 +14,8 @@
     <!-- Styles -->
     @livewireStyles
 
-
-    <link rel="stylesheet" href="/public/build/assets/app.71cd008f.css">
     <!-- Scripts -->
-    <script src="/public/build/assets/app.4081dee3.js"></script>
-
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body class="font-inter antialiased bg-slate-100 text-slate-600" :class="{ 'sidebar-expanded': sidebarExpanded }"
