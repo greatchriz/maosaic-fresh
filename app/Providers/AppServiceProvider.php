@@ -5,9 +5,8 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
 use Illuminate\Contracts\Auth\Guard;
-// use Illuminate\Support\Facades\Auth;
-
-
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Schema;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -30,6 +29,8 @@ class AppServiceProvider extends ServiceProvider
 
      public function boot(Guard $auth)
      {
+            Schema::defaultStringLength(191);
+
 
          // Using Closure based composers...
          View::composer('*', function ($view) use ($auth) {
