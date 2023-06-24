@@ -9,7 +9,7 @@
                         <a class="relative inline-flex items-start mr-5" href="#0">
 
                             @if(!empty($member->profile_photo_url))
-                                <img class="w-8 h-8 rounded-full" src="{{ $member->profile_photo_url }}" width="64" height="64"
+                                <img class="w-8 h-8 rounded-full" src="/storage/{{ $member->profile_photo_path }}" width="64" height="64"
                                 alt="{{ $member->name }}" />
 
                             @else

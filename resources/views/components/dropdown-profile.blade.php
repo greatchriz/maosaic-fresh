@@ -5,7 +5,7 @@
 <div class="relative inline-flex" x-data="{ open: false }">
     <button class="inline-flex justify-center items-center group" aria-haspopup="true" @click.prevent="open = !open"
         :aria-expanded="open">
-        <img class="w-8 h-8 rounded-full" src="{{ Auth::user()->profile_photo_url }}" width="32" height="32"
+        <img class="w-8 h-8 rounded-full" src="/storage/{{ Auth::user()->profile_photo_path }}" width="32" height="32"
             alt="{{ Auth::user()->name }}" />
         <div class="flex items-center truncate">
             <span class="truncate ml-2 text-sm font-medium group-hover:text-slate-800">{{ Auth::user()->name }}</span>
