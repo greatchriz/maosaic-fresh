@@ -11,6 +11,24 @@
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
 
+    <link
+        href="/dash/style.css"
+        rel="stylesheet"
+    >
+
+    <link
+        href="/dash/css/vendors/flatpickr.min.css"
+        rel="stylesheet"
+    >
+    <link
+        href="/dash/css/vendors/flatpickr.min.css"
+        rel="stylesheet"
+    >
+    <link
+        href="/dash/style.css"
+        rel="stylesheet"
+    >
+
     <!-- Styles -->
     @livewireStyles
 
@@ -18,10 +36,6 @@
         {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
 
         {{-- replicate the code above with mix instead of vite --}}
-
-        <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-        <script src="{{ mix('js/app.js') }}" defer></script>
-
 
 </head>
 
@@ -85,6 +99,14 @@
     </div>
 
     @livewireScripts
+
+    <script src="/dash/js/vendors/alpinejs.min.js" defer></script>
+    <script src="/dash/js/vendors/chart.js"></script>
+    <script src="/dash/js/vendors/moment.js"></script>
+    <script src="/dash/js/vendors/chartjs-adapter-moment.js"></script>
+    <script src="/dash/js/fintech-charts.js"></script>
+    <script src="/dash/js/vendors/flatpickr.js"></script>
+    <script src="/dash/js/flatpickr-init.js"></script>
 </body>
 
 </html>
