@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('account_number');
-            $table->float('account_balance', 12, 2)->default(50.00);
+            $table->string('account_number' 12, 2);
+            $table->float('account_balance')->default(50.00);
             $table->string('d_of_birth')->nullable();
             $table->string('gender')->nullable();
             $table->text('home_address')->nullable();
