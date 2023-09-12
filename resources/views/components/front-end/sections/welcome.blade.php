@@ -19,8 +19,8 @@
                                 Everything you need to know about your wealth in one place. How much you have, how much you spend, and how much you can save. Quick loan application, easy payment, and no collateral.
                             </p>
                             <div class="info-btn-group wow fadeInUp" data-wow-delay="0.4s">
-                                <a href="/contact" class="btn more-btn mr-3">contact us</a>
-                                <a href="/about" class="btn more-btn"> Learn more</a>
+                                <a href="/register" class="btn more-btn mr-3">Register</a>
+                                <a href="/login" class="btn more-btn">Login </a>
                             </div>
                         </div>
                     </div>
