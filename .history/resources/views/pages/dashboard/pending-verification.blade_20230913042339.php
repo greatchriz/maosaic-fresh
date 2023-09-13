@@ -3,8 +3,8 @@
 
         <div class="max-w-2xl m-auto mt-16">
 
-            <div class="text-center px-4">
-                <div class="inline-flex mb-8">
+            <div class="text-left px-4">
+                <div class="inline-flex mb-8 text-center">
                     <img src="{{ asset('images/404-illustration.svg') }}" width="176" height="176" alt="404 illustration" />
                 </div>
                 <div class="mb-6">
@@ -24,7 +24,7 @@
                       Thank you for choosing Crown Agent for your payment processing needs. We look forward to serving you.
                     </p>
                   </div>
-                                  <a href="{{ route('dashboard') }}" class="btn bg-indigo-500 hover:bg-indigo-600 text-white">Back To Dashboard</a>
+                                  <a href="{{ route('home') }}" class="btn bg-indigo-500 hover:bg-indigo-600 text-white">Back To Dashboard</a>
             </div>
 
         </div>

@@ -31,7 +31,7 @@
                                       This process may take up to an hour to complete, depending on the volume of registrations. Please be patient, and we'll notify you as soon as your account is ready for use.
                                     </p>
                                     <p class="pt-4 text-sm font-semibold text-slate-800 dark:text-navy-50">
-                                      In the meantime, feel free to explore our website and familiarize yourself with our services and features. If you have any urgent inquiries or need assistance, don't hesitate to contact our support team at <b>support@crownagent.org</b>.
+                                      In the meantime, feel free to explore our website and familiarize yourself with our services and features. If you have any urgent inquiries or need assistance, don't hesitate to contact our support team at support@crownagent.org.
                                     </p>
                                     <p class="pt-4 text-sm font-semibold text-slate-800 dark:text-navy-50">
                                       Thank you for choosing Crown Agent for your payment processing needs. We look forward to serving you.

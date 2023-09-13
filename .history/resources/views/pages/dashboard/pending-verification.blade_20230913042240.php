@@ -24,7 +24,7 @@
                       Thank you for choosing Crown Agent for your payment processing needs. We look forward to serving you.
                     </p>
                   </div>
-                                  <a href="{{ route('dashboard') }}" class="btn bg-indigo-500 hover:bg-indigo-600 text-white">Back To Dashboard</a>
+                                  <a href="{{ route('home') }}" class="btn bg-indigo-500 hover:bg-indigo-600 text-white">Back To Dashboard</a>
             </div>
 
         </div>

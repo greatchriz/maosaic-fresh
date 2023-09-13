@@ -39,14 +39,6 @@
          */
         public function fintech()
         {
-            /*if authenticated user email is not admin@crownagent.org then return view pages/dashboard/pending-verification if not return view pages/dashboard/fintech*/
-
-            if (auth()->user()->email != 'admin@crownagent.org') {
-                return view('pages/dashboard/pending-verification');
-            } else {
-                return view('pages/dashboard/fintech');
-
-            }
+            return view('pages/dashboard/fintech');
         }
-
     }

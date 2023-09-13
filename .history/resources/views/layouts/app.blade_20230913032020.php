@@ -63,6 +63,15 @@
 
             <main>
 
+              {{-- create a component tag for modal component --}}
+
+
+
+
+              {{-- END modal component --}}
+
+
+                <!-- if the page session has success then import success component -->
 
 
                 @if (session('success'))
