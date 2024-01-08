@@ -74,12 +74,7 @@
     </head>
 
     <body class="light-version">
-        <!-- Preloader -->
-        <div id="preloader">
-            <div class="preload-content">
-                <div id="loader-load"></div>
-            </div>
-        </div>
+      
 
         <x-front-end.layout.nav />
 
