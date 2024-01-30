@@ -6,14 +6,13 @@
             <div class="flex items-center mb-4 md:mb-0">
                 <!-- Avatar -->
                 <div class="mr-4">
-                @empty($loggedUser->profile_photo_path)
+                @if(!empty($loggedUser->profile_photo_url))
                 <img class="w-8 h-8 rounded-full" src="/dash/images/user-avatar-32.png" width="64" height="64"
                 alt="{{ Auth::user()->name }}" />
-                @else
 
-                <img class="w-8 h-8 rounded-full" src="/storage/{{ Auth::user()->profile_photo_path }}" width="32" height="32"
-            alt="{{ Auth::user()->name }}" />
-                @endempty
+                @else
+                <img class="w-8 h-8 rounded-full"  src="{{ asset('images/person.jpg') }}" width="64" height="64" alt="User" />
+                @endif
                 </div>
                 <!-- User info -->
                 <div class="">

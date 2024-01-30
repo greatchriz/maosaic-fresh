@@ -11,8 +11,6 @@
                 alt="{{ Auth::user()->name }}" />
                 @else
 
-                <img class="w-8 h-8 rounded-full" src="/storage/{{ Auth::user()->profile_photo_path }}" width="32" height="32"
-            alt="{{ Auth::user()->name }}" />
                 @endempty
                 </div>
                 <!-- User info -->

@@ -125,7 +125,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
     Route::get('/users/{user}/sendmail', [UserController::class, 'sendmail'])->name('admin-user-sendmail');
 
-    Route::post('/users/{user}/postmail', [UserController::class, 'postmail']);
+    // Route::get('/users/{user}/withdraw', [UserController::class, 'postmail']);
     Route::get('/users/{user}/withdraw', [UserController::class, 'withdraw'])->name('user-withdraw');
     Route::put('/users/{user}/balance', [UserController::class, 'updatebalance']);
     Route::get('/users/{user}/atm', [AtmController::class, 'create'])->name('atm-request');

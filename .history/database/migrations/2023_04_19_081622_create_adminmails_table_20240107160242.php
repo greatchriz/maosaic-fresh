@@ -16,7 +16,6 @@ return new class extends Migration
         Schema::create('adminmails', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('bodyTitle')->nullable()->default('text');
             // create a column fit for a longtext
             $table->longText('body');
             $table->timestamps();

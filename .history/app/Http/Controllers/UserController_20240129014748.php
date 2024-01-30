@@ -85,7 +85,7 @@ class UserController extends Controller
     {
 
         // query the adminsmail table and get the title and body of the first model
-        $adminmailcontent = Adminmailcontent::find(2);
+        $adminmailcontent = Adminmailcontent::first();
 
         Mail::to($user)->send(new AdminMail($user, $adminmailcontent));
 

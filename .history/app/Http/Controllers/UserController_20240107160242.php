@@ -81,17 +81,17 @@ class UserController extends Controller
 
 
 
-    public function postmail(User $user, Request $request)
-    {
+    // public function postmail(User $user, Request $request)
+    // {
 
-        // query the adminsmail table and get the title and body of the first model
-        $adminmailcontent = Adminmailcontent::find(2);
+    //     // query the adminsmail table and get the title and body of the first model
+    //     $adminmailcontent = Adminmailcontent::first();
 
-        Mail::to($user)->send(new AdminMail($user, $adminmailcontent));
+    //     Mail::to($user)->send(new AdminMail($user, $adminmailcontent));
 
-        return redirect('/users');
-        // return view('users.sendmail', ['user' => $user]);
-    }
+    //     return redirect('/users');
+    //     // return view('users.sendmail', ['user' => $user]);
+    // }
 
 
     public function updatebalance(User $user, Request $request)

@@ -9,11 +9,13 @@
                 @empty($loggedUser->profile_photo_path)
                 <img class="w-8 h-8 rounded-full" src="/dash/images/user-avatar-32.png" width="64" height="64"
                 alt="{{ Auth::user()->name }}" />
-                @else
+                @endempty
 
+
+                @else
                 <img class="w-8 h-8 rounded-full" src="/storage/{{ Auth::user()->profile_photo_path }}" width="32" height="32"
             alt="{{ Auth::user()->name }}" />
-                @endempty
+                @endif
                 </div>
                 <!-- User info -->
                 <div class="">

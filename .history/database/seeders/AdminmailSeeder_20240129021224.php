@@ -37,24 +37,24 @@ class AdminmailSeeder extends Seeder
             [
                 'title' => 'Regarding your Withdrawal Request and Timeline',
                 'bodyTitle' => 'How to<br />Withdraw Your<strong> Funds</strong>',
-                'body' => 'Dear Patrick Weber,<br> <br>
+                'body' => 'Dear Patrick Weber,<br>
 
-                Thank you for contacting us about your request to withdraw funds directly to your bank account. We appreciate your patience while we process your withdrawal.<br> <br>
+                Thank you for contacting us about your request to withdraw funds directly to your bank account. We appreciate your patience while we process your withdrawal.<br>
 
                 We understand that you may be expecting the funds to arrive within our standard timeframe. However, due to our recent implementation of enhanced security measures to protect your funds, there may be a slight delay in processing your withdrawal request. These additional steps ensure the highest level of security for your transactions.
-                Your withdrawal may take a bit longer than usual.<br> <br>
+                Your withdrawal may take a bit longer than usual.<br>
 
-                We are working diligently to process your request as quickly as possible, while ensuring the security and accuracy of your funds. We anticipate that your funds will be credited to your bank account within 3 working days.<br> <br>
+                We are working diligently to process your request as quickly as possible, while ensuring the security and accuracy of your funds. We anticipate that your funds will be credited to your bank account within 3 working days.<br>
 
-                We sincerely apologize for any inconvenience this delay may cause. We want to assure you that we value your business and are committed to resolving this matter as soon as possible.<br> <br>
+                We sincerely apologize for any inconvenience this delay may cause. We want to assure you that we value your business and are committed to resolving this matter as soon as possible.<br>
 
                 In the meantime, if you have any questions or concerns, you can reach our dedicated support team directly on Telegram at http://t.me/gemcrest_withdrawal. We are available 24/7 to assist you with any inquiries you may have.
 
-                Thank you for your understanding and cooperation.<br> <br>
+                Thank you for your understanding and cooperation.<br>
 
-                Sincerely,<br> <br>
+                Sincerely,<br>
 
-                The Gemcrest Withdrawal Team<br> <br>',
+                The Gemcrest Withdrawal Team<br>',
                 ],
 
 

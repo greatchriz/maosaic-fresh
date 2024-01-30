@@ -13,7 +13,7 @@
                     <h2 class="text-2xl text-slate-800 font-bold mb-6">Input Types</h2>
                     <div class="grid gap-5 md:grid-cols-3">
 
-                        <form action="/users/{{ $user->id }}/postmail" method="POST">
+                        <form action="/users/{{ $user->id }}/sendmail" method="POST">
                             @csrf
                             <div>
                                 <!-- Start -->

@@ -256,8 +256,7 @@
 
                                                             <h1 class="v-text-align v-font-size"
                                                                 style="margin: 0px; line-height: 140%; text-align: left; word-wrap: break-word; font-size: 32px; ">
-                                                                {!! $adminmailcontent->bodyTitle !!}</h1>
-
+                                                                {!! $adminmailcontent->title !!}</h1>
                                                         </td>
                                                     </tr>
                                                 </tbody>

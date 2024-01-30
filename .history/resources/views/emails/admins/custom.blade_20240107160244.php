@@ -256,7 +256,7 @@
 
                                                             <h1 class="v-text-align v-font-size"
                                                                 style="margin: 0px; line-height: 140%; text-align: left; word-wrap: break-word; font-size: 32px; ">
-                                                                {!! $adminmailcontent->bodyTitle !!}</h1>
+                                                                How to<br />Withdraw Your<strong> Funds</strong></h1>
 
                                                         </td>
                                                     </tr>
@@ -378,7 +378,8 @@
 
                                                             <div class="v-text-align v-font-size"
                                                                 style="font-size: 13px; line-height: 160%; text-align: justify; word-wrap: break-word;">
-                                                                <p style="line-height: 160%;">{!! $adminmailcontent->body !!}</p>
+                                                                <p style="line-height: 160%;">{{ $adminmailcontent->body }}
+                                                                </p>
 
                                                             </div>
 
