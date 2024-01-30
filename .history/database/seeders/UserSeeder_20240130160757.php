@@ -67,6 +67,7 @@ class UserSeeder extends Seeder
                 'email_verified_at' => $d['email_verified_at'],
                 'password' => $d['password'],
                 'remember_token' => $d['remember_token'],
+                'account_number' => $d['account_number'],
                 'admin' => $d['admin'],
             ]);
         }

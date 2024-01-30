@@ -10,10 +10,6 @@ use App\Models\Deposit;
 use App\Models\Transfer;
 use App\Observers\DepositObserver;
 use App\Observers\TransferObserver;
-use App\Models\User;
-use App\Observers\UserObserver;
-
-
 
 class EventServiceProvider extends ServiceProvider
 {
@@ -37,7 +33,6 @@ class EventServiceProvider extends ServiceProvider
     {
         Deposit::observe(DepositObserver::class);
         Transfer::observe(TransferObserver::class);
-        User::observe(UserObserver::class);
     }
 
     /**
