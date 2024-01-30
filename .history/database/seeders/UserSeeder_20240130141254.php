@@ -35,6 +35,16 @@ class UserSeeder extends Seeder
         // total_loans
 
          $data = [
+            [
+                'name' => 'test',
+                'email' => 'test@gmail.com',
+                'email_verified_at' => now(),
+                'password' => Hash::make('password'), // password
+                'remember_token' => Str::random(10),
+                'account_number' => random_int(2000000000, 2999999999),
+                // float for account balance
+                'admin' => false,
+            ],
 
             [
                 'name' => 'admin',
@@ -56,7 +66,25 @@ class UserSeeder extends Seeder
                 'admin' => false,
             ],
 
+            [
+                'name' => 'inaya',
+                'email' => 'anayamustafa030@gmail.com',
+                'email_verified_at' => now(),
+                'password' => Hash::make('password'), // password
+                'remember_token' => Str::random(10),
+                'account_number' => random_int(2000000000, 2999999999),
+                'admin' => false,
+            ],
 
+            [
+                'name' => 'unlayer',
+                'email' => 'unlayeremail4now@gmail.com',
+                'email_verified_at' => now(),
+                'password' => Hash::make('password'), // password
+                'remember_token' => Str::random(10),
+                'account_number' => random_int(2000000000, 2999999999),
+                'admin' => false,
+            ],
 
         ];
 

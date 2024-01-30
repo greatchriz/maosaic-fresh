@@ -31,7 +31,7 @@ class CreateNewUser implements CreatesNewUsers
         return User::create([
             'name' => $input['name'],
             'email' => $input['email'],
-            'account_number' => random_int(2000000000, 2999999999),
+            'account_number' => mt_rand(2000000000, 2999999999),
             'password' => Hash::make($input['password']),
         ]);
     }
